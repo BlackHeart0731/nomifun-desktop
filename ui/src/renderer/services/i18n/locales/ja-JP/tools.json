@@ -1,0 +1,67 @@
+{
+  "unknownFile": "不明なファイル",
+  "newFile": "新規ファイル",
+  "deletedFile": "削除されたファイル",
+  "modified": "変更済み",
+  "fileChanges": "ファイル変更",
+  "shell": {
+    "displayName": "シェルコマンド",
+    "description": "シェルコマンドを実行"
+  },
+  "fileOps": {
+    "displayName": "ファイル操作",
+    "description": "ファイルの読み取り、書き込み、変更"
+  },
+  "webSearch": {
+    "displayName": "Web検索",
+    "description": "Webコンテンツを検索"
+  },
+  "mcp": {
+    "generic": {
+      "displayName": "MCPツール: {{toolName}}",
+      "description": "MCPツール呼び出し: {{toolName}}"
+    }
+  },
+  "unknown": {
+    "displayName": "不明なツール",
+    "description": "不明なツールタイプ"
+  },
+  "status": {
+    "pending": "保留",
+    "executing": "実行中",
+    "success": "成功",
+    "error": "エラー",
+    "canceled": "キャンセル"
+  },
+  "titles": {
+    "web_search_started": "Web検索を開始",
+    "web_search_completed": "Web検索が完了",
+    "web_search": "Web検索",
+    "applying_patch": "パッチを適用中",
+    "patch_applied": "パッチを適用しました",
+    "file_patch": "ファイルパッチ",
+    "mcp_tool_starting": "MCPツール: {{toolName}} (開始中)",
+    "mcp_tool": "MCPツール: {{toolName}}",
+    "execute_command": "実行: {{command}}",
+    "command_output": "コマンド出力",
+    "command_completed": "コマンド完了",
+    "shell_command": "シェルコマンド"
+  },
+  "labels": {
+    "search_query": "検索クエリ:",
+    "file_changes": "ファイル変更:",
+    "tool_details": "ツール詳細:",
+    "tool": "ツール",
+    "arguments": "引数:",
+    "result": "結果:",
+    "command": "コマンド:",
+    "working_directory": "作業ディレクトリ:",
+    "exit_code": "終了: {{code}}",
+    "duration": "所要時間: {{seconds}}"
+  },
+  "actions": {
+    "create": "作成",
+    "modify": "変更",
+    "delete": "削除"
+  }
+}

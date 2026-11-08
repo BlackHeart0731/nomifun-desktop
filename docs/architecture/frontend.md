@@ -20,7 +20,7 @@ within a supported desktop window should adapt with container-aware layout.
 | Routing | `react-router-dom` v7 with `HashRouter` |
 | UI | Arco Design + custom CSS theme layers + UnoCSS |
 | Data | SWR plus React contexts for app-shaped state |
-| i18n | `i18next` / `react-i18next`; current app locales are `zh-CN` and `en-US` |
+| i18n | `i18next` / `react-i18next`; current app locales are `zh-CN`, `en-US` and `ja-JP` |
 | Terminal | `xterm.js` with fit/web-links/webgl addons |
 | Markdown | `react-markdown`, GFM, KaTeX, Mermaid |
 
@@ -130,7 +130,7 @@ navigation does not introduce another product object.
 
 `useTheme` selects light/dark mode; `useColorScheme` selects the brand scheme, defaulting to `default`. Prefer semantic tokens in components. `AppThemeRuntime` and `applyCustomCss` inject preset CSS and apply `!important`. Light/dark token sets are complete and symmetric, selectors cover `:root`/`body`, and Arco RGB scales use comma-separated triples. Themes exclude broad selectors, layout properties and external resources. Popover alpha is at least .86; feedback/tooltips use solid colors, and `.message-item` outer wrappers receive no decoration. See the [styling contract](../contributing/styling.md).
 
-i18next uses static `zh-CN`/`en-US` bundles and shared normalization from [common/config/i18n.ts](../../ui/src/common/config/i18n.ts). Backend settings own language preferences; localStorage is an initial-render hint. The current `changeLanguage`/preference helper synchronizes the main window, companion and other surfaces rather than updating independent instances. [localeKeyParity.ts](../../ui/src/renderer/services/i18n/localeKeyParity.ts) validates plural keys against each locale's categories, without demanding identical plural suffixes across languages.
+i18next uses static `zh-CN`/`en-US`/`ja-JP` bundles and shared normalization from [common/config/i18n.ts](../../ui/src/common/config/i18n.ts). Backend settings own language preferences; localStorage is an initial-render hint. The current `changeLanguage`/preference helper synchronizes the main window, companion and other surfaces rather than updating independent instances. [localeKeyParity.ts](../../ui/src/renderer/services/i18n/localeKeyParity.ts) validates plural keys against each locale's categories, without demanding identical plural suffixes across languages.
 
 ## Desktop-Specific UX
 

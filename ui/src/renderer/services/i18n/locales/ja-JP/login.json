@@ -1,0 +1,29 @@
+{
+  "pageTitle": "NomiFun - サインイン",
+  "brand": "NomiFun",
+  "subtitle": "おかえりなさい。アカウントにサインインしてください",
+  "username": "ユーザー名",
+  "usernamePlaceholder": "ユーザー名を入力",
+  "password": "パスワード",
+  "passwordPlaceholder": "パスワードを入力",
+  "rememberMe": "ログイン状態を保持",
+  "submit": "サインイン",
+  "submitting": "サインイン中...",
+  "success": "ログイン成功！リダイレクト中...",
+  "showPassword": "パスワードを表示",
+  "hidePassword": "パスワードを非表示",
+  "languageToggle": "言語を変更",
+  "footerPrimary": "コマンドラインAIを変革",
+  "footerSecondary": "モダン & 効率的",
+  "setupSubtitle": "初回セットアップ — 管理者アカウントを作成",
+  "setupSubmit": "管理者を作成して続行",
+  "setupSuccess": "管理者アカウントを作成しました。リダイレクト中...",
+  "errors": {
+    "empty": "ユーザー名とパスワードを入力してください",
+    "invalidCredentials": "ユーザー名またはパスワードが正しくありません",
+    "tooManyAttempts": "試行回数が多すぎます。しばらくしてから再試行してください",
+    "networkError": "接続に失敗しました。再試行してください",
+    "serverError": "サーバーエラーが発生しました。しばらくしてから再試行してください",
+    "unknown": "サインインに失敗しました。再試行してください"
+  }
+}

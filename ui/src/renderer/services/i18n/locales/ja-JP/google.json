@@ -1,0 +1,7 @@
+{
+  "mode": {
+    "autoGemini3Desc": "Gemini CLIにタスクに最適なモデルを判断させます: gemini-3-pro, gemini-3-flash",
+    "autoGemini25Desc": "Gemini CLIにタスクに最適なモデルを判断させます: gemini-2.5-pro, gemini-2.5-flash",
+    "manualDesc": "モデルを手動で選択"
+  }
+}

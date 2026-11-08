@@ -29,6 +29,7 @@ import '@arco-design/web-react/dist/css/arco.css';
 import '@icon-park/react/styles/index.css';
 import enUS from '@arco-design/web-react/es/locale/en-US';
 import zhCN from '@arco-design/web-react/es/locale/zh-CN';
+import jaJP from '@arco-design/web-react/es/locale/ja-JP';
 import { useTranslation } from 'react-i18next';
 
 // Styles
@@ -70,6 +71,7 @@ import HOC from './utils/ui/HOC';
 const arcoLocales: Record<string, typeof enUS> = {
   'zh-CN': zhCN,
   'en-US': enUS,
+  'ja-JP': jaJP,
 };
 
 const AppProviders: React.FC<PropsWithChildren> = ({ children }) =>

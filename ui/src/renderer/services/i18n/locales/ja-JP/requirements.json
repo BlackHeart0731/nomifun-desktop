@@ -1,0 +1,188 @@
+{
+  "title": "要件",
+  "siderTitle": "リクエスト",
+  "subtitle": "要件、拡張機能、データソースを管理",
+  "section": {
+    "workspace": "要件",
+    "extensions": "拡張機能",
+    "sources": "データソース"
+  },
+  "newRequirement": "新規要件",
+  "empty": "要件がまだありません",
+  "search": "タイトル、内容、または #番号で検索",
+  "searchLabel": "検索",
+  "allTags": "すべてのタグ",
+  "allStatuses": "すべてのステータス",
+  "viewList": "リスト",
+  "viewKanban": "カンバン",
+  "loadError": "要件の読み込みに失敗しました",
+  "retry": "再試行",
+  "sort": {
+    "label": "並び替え",
+    "direction": "方向",
+    "default": "デフォルト順",
+    "byId": "番号",
+    "byCreatedAt": "作成日",
+    "byUpdatedAt": "更新日",
+    "byStatus": "ステータス",
+    "asc": "昇順",
+    "desc": "降順"
+  },
+  "selection": {
+    "selectAllPage": "ページを選択",
+    "clear": "クリア",
+    "totalCount": "合計 {{count}}",
+    "selectedCount": "{{count}} 件選択"
+  },
+  "columns": {
+    "seq": "No.",
+    "id": "ID",
+    "title": "タイトル",
+    "tag": "タグ",
+    "order": "順序",
+    "status": "ステータス",
+    "session": "セッション",
+    "createdAt": "作成日",
+    "actions": "操作"
+  },
+  "status": {
+    "pending": "保留",
+    "in_progress": "進行中",
+    "done": "完了",
+    "failed": "失敗",
+    "cancelled": "キャンセル",
+    "needs_review": "レビューが必要"
+  },
+  "actions": {
+    "edit": "編集",
+    "delete": "削除",
+    "deleteConfirm": "この要件を削除しますか？",
+    "deleteOk": "要件を削除しました",
+    "batchDelete": "{{count}} 件を選択削除",
+    "batchDeleteConfirm": "選択した {{count}} 件の要件を削除しますか？",
+    "batchDeleteOk": "{{count}} 件の要件を削除しました"
+  },
+  "detail": {
+    "createdBy": "作成者",
+    "completedAt": "完了日",
+    "session": "セッション",
+    "completionNote": "完了メモ",
+    "attachments": "画像"
+  },
+  "form": {
+    "createTitle": "新規要件",
+    "editTitle": "要件を編集",
+    "titleLabel": "タイトル",
+    "titlePlaceholder": "要件名",
+    "contentLabel": "内容",
+    "contentPlaceholder": "タスクを説明してください（Markdown対応）",
+    "tagLabel": "タグ",
+    "tagPlaceholder": "タグを選択または作成",
+    "orderLabel": "実行順序",
+    "orderHelp": "小数点付きの数値。例: 1, 1.2, 2.3.1 — 小さい順に実行",
+    "statusLabel": "ステータス",
+    "submit": "保存",
+    "cancel": "キャンセル",
+    "createdOk": "要件を作成しました",
+    "updatedOk": "要件を更新しました",
+    "titleRequired": "タイトルは必須です",
+    "tagRequired": "タグは必須です",
+    "attachmentsLabel": "画像",
+    "attachmentsHelp": "貼り付け、ドラッグ、またはクリックで画像をアップロード（jpg/png/gif/webp/bmp/svg）。要件とともに保存され、実行モデルに渡されます",
+    "attachmentsOnlyImages": "画像ファイルのみサポートされています",
+    "addImage": "画像を追加",
+    "attachmentTooLarge": "画像が30MBの上限を超えています"
+  },
+  "autowork": {
+    "label": "AutoWork",
+    "startSession": "AutoWorkセッションを開始",
+    "hint": "このセッションでタグの要件を1つずつ自動的に処理します。",
+    "tagLabel": "タグ",
+    "selectTag": "タグを選択",
+    "disableToChangeTag": "タグを変更するにはAutoWorkをオフにしてください",
+    "tagRequired": "AutoWorkを有効にするにはタグを選択してください",
+    "enabledOk": "AutoWorkを有効化しました",
+    "disabledOk": "AutoWorkを無効化しました",
+    "resume": "再開",
+    "resumedOk": "AutoWorkを再開しました",
+    "pausedReasons": {
+      "executionFailed": "前回の実行が失敗しました。再開前に確認してください。",
+      "userInterrupted": "実行が手動で停止されました。キューを続行するには再開してください。",
+      "userActionRequired": "実行が人の注意を待っています。",
+      "unknown": "AutoWorkが一時停止しています。要件と実行状態を確認してください。"
+    },
+    "completedCount": "完了: {{count}}",
+    "emptyTitle": "利用可能なタグがありません",
+    "emptyDescription": "タグは要件から自動的に作成されます。タグ付き要件を追加して開始してください。",
+    "emptyCta": "新規要件",
+    "loadingTags": "タグを読み込み中",
+    "loadErrorTitle": "タグを読み込めませんでした",
+    "loadErrorDescription": "接続を確認して再試行してください。",
+    "retry": "再試行",
+    "state": {
+      "off": "オフ",
+      "idle": "アイドル",
+      "active": "アクティブ",
+      "paused": "一時停止"
+    }
+  },
+  "kanban": {
+    "selectTag": "タグを選択",
+    "emptyColumn": "空"
+  },
+  "emptyState": {
+    "title": "要件がまだありません",
+    "desc": "最初の要件を作成して管理と自動化を開始",
+    "cta": "新規要件"
+  },
+  "drawer": {
+    "detailTitle": "要件詳細",
+    "view": "表示",
+    "edit": "編集"
+  },
+  "ext": {
+    "notify": "通知",
+    "autowork": "AutoWork"
+  },
+  "notify": {
+    "channelsTitle": "通知チャンネル",
+    "channelsHint": "メッセージの送信先",
+    "newChannel": "新規チャンネル",
+    "rulesTitle": "トリガールール",
+    "rulesHint": "通知するタイミング",
+    "ruleWhen": "タイミング",
+    "ruleReq": "要件",
+    "ruleThen": "→ 通知",
+    "ruleAnyTag": "任意のタグ",
+    "eventsLabel": "イベント",
+    "selectChannel": "チャンネルを選択",
+    "clearChannel": "通知しない",
+    "noChannel": "未バインド",
+    "eventsRequired": "少なくとも1つのイベントを選択してください",
+    "futureGlobalRule": "グローバルフォールバックルール（近日対応）"
+  },
+  "source": {
+    "connectedTitle": "接続済み",
+    "upcomingTitle": "近日対応 · 統合のために予約",
+    "status": {
+      "active": "使用中",
+      "soon": "近日対応",
+      "planned": "計画中"
+    },
+    "connect": "接続…",
+    "count": "{{count}} 件の要件",
+    "local": {
+      "name": "ローカル要件",
+      "desc": "アプリ内で作成・管理され、オフラインで動作"
+    },
+    "lark": {
+      "name": "Lark · Feishu Bitable",
+      "desc": "Bitableレコードを要件にマッピングし、定期的に同期（読み取り専用優先）"
+    },
+    "other": {
+      "name": "その他のサードパーティ",
+      "desc": "汎用API / Notion / Jiraなど、同じソースインターフェースで統合"
+    },
+    "note": "すべての要件に「source」タグが付きます。プラットフォーム統合は「データソースプロバイダー」として抽象化され、ローカルはその1つにすぎません。将来の統合 = プロバイダーを追加するだけで、コアCRUDには触れません。"
+  }
+}

@@ -21,6 +21,7 @@ import {
 // Static imports for all locales to ensure packaged app can always switch language.
 import enUS from './locales/en-US/index';
 import zhCN from './locales/zh-CN/index';
+import jaJP from './locales/ja-JP/index';
 
 export type { I18nKey, I18nModule } from './i18n-keys';
 
@@ -33,6 +34,7 @@ export const supportedLanguages = i18nConfig.supportedLanguages;
 const localeData: LocaleData = {
   'en-US': enUS,
   'zh-CN': zhCN,
+  'ja-JP': jaJP,
 };
 
 const fallbackLocale = localeData[DEFAULT_LANGUAGE] ?? {};

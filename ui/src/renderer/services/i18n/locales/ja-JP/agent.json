@@ -1,0 +1,48 @@
+{
+  "health": {
+    "detectedError": "現在のエージェント({{agent}})でエラーを検出しました",
+    "autoSwitching": "システムは自動的に切り替える予定です。",
+    "evaluating": "ネットワーク遅延とモデルの利用可能性を評価中...",
+    "checking": "{{agent}} のエンドポイントを確認中...",
+    "foundBest": "最適な代替手段が見つかりました",
+    "recommendSwitch": "推奨",
+    "available": "利用可能",
+    "lowLatency": "低遅延",
+    "mediumLatency": "中遅延",
+    "highLatency": "高遅延",
+    "bestMatch": "最適一致",
+    "noAvailable": "現在の環境では利用可能なエージェントがありません",
+    "checkConfig": "設定を確認するか、後でもう一度お試しください"
+  },
+  "setup": {
+    "connectionError": "接続エラー",
+    "notConfigured": "{{agent}} は設定されていません",
+    "authRequired": "このエージェントを使用するには認証またはAPIキーが必要です。",
+    "findingAlternatives": "利用可能な代替手段を検索中...",
+    "checkingAgent": "{{agent}} を確認中...",
+    "alternativesFound": "{{count}} 個の利用可能な代替手段が見つかりました",
+    "autoSwitching": "利用可能な最適のエージェントに自動切り替えていきます...",
+    "configError": "設定エラー。設定を確認するか、代替手段を選択してください:",
+    "noAlternatives": "利用可能なエージェントが見つかりません",
+    "configureFirst": "まず設定でエージェントを設定してください。",
+    "switching": "エージェントを切り替えていきます..."
+  },
+  "model": {
+    "switchSuccess": "モデルの切り替えに成功しました",
+    "switchFailed": "モデルの切り替えに失敗しました"
+  },
+  "sendbox": {
+    "placeholder": "{{backend}} にメッセージを送信..."
+  },
+  "status": {
+    "connecting": "{{agent}} に接続中...",
+    "connected": "{{agent}} に接続しました",
+    "authenticated": "{{agent}} で認証しました",
+    "session_active": "{{agent}} とアクティブセッション中",
+    "error": "接続エラー",
+    "unknown": "不明なステータス"
+  },
+  "config": {
+    "reasoning_effort": "推論努力"
+  }
+}

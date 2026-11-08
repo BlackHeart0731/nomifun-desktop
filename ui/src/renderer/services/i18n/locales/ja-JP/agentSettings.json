@@ -1,0 +1,693 @@
+{
+  "title": "エージェントワークベンチ",
+  "middlewareOrder": {
+    "title": "実行拡張機能",
+    "hint": "同じステージの拡張機能は、このリストに従って配置されます。デフォルトの順序を上書きします。保存すると、新しいセッションにのみ適用されます。",
+    "empty": "公開されている実行拡張機能をここで選択してください",
+    "up": "{{name}} を前に移動",
+    "down": "{{name}} を後に移動",
+    "reset": "デフォルトの順序を復元",
+    "missing": "拡張機能は不可用または選択されていない可能性があります。元の選択を復元するか、順序をリセットしてください。",
+    "toolAccess": "プラグインがツール名とホストが提供するパラメータを読み取りますが、権限を承認したり、代わりに権限を変更したり、パラメータを変更したりすることはできません。チェック失敗は実行を停止します。",
+    "phase": {
+      "before_model": "モデル要求前",
+      "before_tool": "ツール実行前",
+      "unknown": "段階が認識されません"
+    }
+  },
+  "contextOrder": {
+    "title": "コンテキスト順序",
+    "hint": "同じ段階のコンテキストは、リストに従って補完されます。その他のものはデフォルトの順序を使用します。保存すると、新しいセッションにのみ適用されます。",
+    "empty": "能力設定でコンテキスト拡張を追加した後、順序を調整できます。",
+    "up": "{{name}} を前に移動",
+    "down": "{{name}} を後に移動",
+    "reset": "デフォルトの順序を復元",
+    "missing": "貢献は不可用または選択されていない可能性があります。元の選択を復元するか、順序をリセットしてください。"
+  },
+  "subtitle": "あなたのAgentをより仕事に合うように設定・管理する",
+  "loading": "Agentワークベンチを読み込み中…",
+  "loadingEditor": "選択したAgentを読み込み中…",
+  "providers": {
+    "defaultsTitle": "デフォルトの部品の実装",
+    "defaultsHint": "インストールの所有者の設定。新しいAgentや再保存のAgentは未指定の場合、これらのデフォルトを使用します。保存済みのバージョンや既存セッションは変更されません。各項目は個別に保存する必要があります。",
+    "defaultsReload": "再読み込み（未保存の選択を破棄）",
+    "defaultsUnbound": "デフォルト実装は設定されていません",
+    "defaultsMissingHint": "以前のデフォルト実装や契約が使えなくなりました。元の選択はそのままですが、プラグインを復元するか、別の実装を明示的に選択してください。",
+    "defaultsSave": "デフォルト実装を保存",
+    "defaultsLoadError": "デフォルト実装を読み込めませんでした。現在のアカウントがインストールの所有者であることを確認し、再読み込みしてください。",
+    "defaultsSaveError": "保存に失敗しました：選択した実装は使用できないか、デフォルトは他の操作によって変更されています。再読み込みして選択を確認してください。",
+    "title": "部品実装",
+    "hint": "選択した能力の実装を選択します。保存時に互換性と依存性を確認し、実行はまだ権限を通じて行われます。選択した部品はAgentの内部ツールを別に追加しません。",
+    "empty": "選択した能力は現在、置き換え可能な部品を提供していません。能力を持つプラグインを先に追加してください。",
+    "inherit": "設定されたデフォルト実装を使用",
+    "missing": "選択した実装が使えなくなりました",
+    "missingHint": "選択した実装やその契約がディレクトリにありません。元の選択はそのままですが、他の実装を選択するか、デフォルト実装を使用するようになります。"
+  },
+  "freshStart": {
+    "title": "新 v4 ワークスペース",
+    "body": "この代は {{count}} 個の公式テンプレートと空の個人リストから始まります。古い設定はインポートされません。ここでテンプレートを Fork するか、新しいAgentを作成してください。"
+  },
+  "actions": {
+    "create": "新規",
+    "delete": "削除",
+    "fork": "カスタマイズ",
+    "remove": "取り外し",
+    "retry": "再試行",
+    "startConversation": "会話の開始",
+    "saveRevision": "設定を保存"
+  },
+  "recommendation": {
+    "preview": "推薦能力を補う",
+    "title": "推薦能力の追加",
+    "current": "推薦能力は完全に揃っています",
+    "reviewHint": "不足しているモジュール、操作とSkillを確認します。不足しているものを補うことで、これまで閉じていた推薦能力が再び有効になります。",
+    "sessionHint": "新セッションでこの保存済みのAgentを選択すると、この設定を使用します。既存の友達セッションは個別に保存済みの更新を適用できます。",
+    "saveFirst": "現在の変更を保存またはキャンセルしてから、推薦能力の追加を確認してください。",
+    "apply": "補足して保存",
+    "skill": "Skill · v{{version}}"
+  },
+  "defaults": {
+    "untitledName": "無題のAgent",
+    "forkName": "{{name}}のコピー"
+  },
+  "defaultAgent": {
+    "title": "デフォルトAgent",
+    "button": "デフォルトAgent：{{name}}",
+    "hint": "Guidセッションの作成時に、このAgentを使用します。Guidスクリプト中でAgentを切り替えるだけではデフォルトは変更されず、既存のセッションも影響を受けません。",
+    "field": "新セッションで使う",
+    "officialGroup": "公式Agent",
+    "personalGroup": "私のAgent",
+    "save": "デフォルトAgentを保存",
+    "saveFailed": "デフォルトAgentを保存できませんでした。再試行してください。",
+    "unavailable": "以前設定したデフォルトAgentが使えなくなりました。新規セッションでは「{{name}}」にフォールバックします。",
+    "noAvailable": "Guidセッションに使えるAgentがありません。実行可能なAgentを最初に保存してください。",
+    "noAvailableShort": "一時的に使えるAgentはありません"
+  },
+  "productBinding": {
+    "chooseModelLater": "先にAgentを選択してから、互換性の高い会話モデルを設定できます。",
+    "loadFailed": "Agentオプションを読み込めませんでした。再試行してください。",
+    "saveFailed": "Agentが更新されませんでした。後でもう一度お試しください。",
+    "partialSave": "現在のセッションは更新されましたが、デフォルト設定が保存できませんでした。この選択を再度保存してください。",
+    "modelChanged": "現在のモデルとこのAgentは互換性がなく、オプションがリフレッシュされました。モデルの変更またはAgentの選択をし直してください。",
+    "busy": "現在のAgentの保存処理中です。しばらくお待ちください。",
+    "unavailableAgent": "使用できないAgent",
+    "selectionNeeded": "Agent設定を選択してください",
+    "selectionNeededHint": "現在のAgent設定は再確認が必要です。使用するAgentを選択してください。既存のセッション記録は保持されます。",
+    "currentUnavailable": "現在のAgentは一時的に使用できません：{{reason}}。モデルまたはAgentを変更してください。",
+    "reasons": {
+      "web_search": "現在のモデルは必要なネットワーキング検索機能を提供していません",
+      "vision": "現在のモデルは画像理解をサポートしていません",
+      "model": "現在の会話モデルが使えません",
+      "capability": "必要な能力は現在の環境では使えません",
+      "companion": "このAgentは、友達の個性や記憶を保持するために友達能力を有効にする必要があります",
+      "removed": "このAgentは削除されたり、まだ保存されていません"
+    },
+    "label": "Agent設定",
+    "saved": "Agentが更新されました",
+    "companionHint": "この友達のサイドバーとチャット記録と設定を共有します。チャンネルと友達は必要に応じて選択します。選択しない場合でも、基本的なチャットと友達記憶を使用できます。",
+    "officialTag": "公式",
+    "customTag": "カスタム",
+    "applyLatest": "最新設定を適用",
+    "applyLatestHint": "選択した公式テンプレートの最新公開バージョン、または選択した保存済みのAgentの最新設定を、この友達の既存のセッションに適用します。",
+    "editAgent": "Agentを編集"
+  },
+  "library": {
+    "ariaLabel": "Agentリスト",
+    "title": "Agentリスト",
+    "subtitle": "公式テンプレートとあなたのAgent設定",
+    "official": "公式テンプレート",
+    "mine": "私のAgent",
+    "empty": "カスタマイズされたAgentはまだありません。",
+    "moduleCount": "{{count}} 個のモジュール",
+    "recommended": "推薦",
+    "revision": "Revision {{revision}}",
+    "unsaved": "保存済みのRevisionはありません",
+    "bindingCount": "{{count}} 個の使用先",
+    "deleteConfirmTitle": "「{{name}}」を削除しますか？",
+    "deleteConfirmBody": "削除すると、再編集したり、新規セッションで使用したりできなくなります。ただし、既存のセッション履歴は保持されます。",
+    "deleteAria": "Agent「{{name}}」を削除します"
+  },
+  "template": {
+    "readOnly": "公式プレセット",
+    "capabilityHint": "あなたの必要なように能力を増減します。保存すると、あなたのAgentになり、公式プレセットはいつでも使用できます。",
+    "hostUnavailable": "このテンプレートには、現在のNomi-coreホストが使えない能力が含まれています。真のownerが使えるようになるまでForkは許可されません。",
+    "zeroToolTitle": "正確なゼロツールProfile",
+    "zeroToolBody": "Capability、Skill、MCP、Workspace、Coding Contextや隠れた能力の検索を構築しません。",
+    "chat": {
+      "minimal": {
+        "name": "最小限",
+        "description": "基礎的な会話と本機ファイル、プロセス操作。セッション入力ボックスの横でグローバルスキルとMCPを選択できます。"
+      }
+    },
+    "assistant": {
+      "general": {
+        "name": "一般",
+        "description": "調査、ファイル、オフィス、メディア、ブラウザとコンピュータ操作、知識、日程、協業とセッション管理能力の集合。"
+      }
+    },
+    "coding": {
+      "codex": {
+        "name": "プログラミング",
+        "description": "ファイル、コマンド、Git、成果物、プロジェクト記憶、知識、調査、協業、セッション管理とSSH。必要に応じてデスクトップタスクにブラウザとコンピュータツールを追加できます。"
+      }
+    },
+    "companion": {
+      "default": {
+        "name": "友達",
+        "description": "選択した友達の人格と記憶を製品境界内に保持し、調査、ファイル、オフィス、メディア、ブラウザ、アプリ操作、知識、日程、メッセージと協業などの日常办事能力を備えます。"
+      }
+    },
+    "customerService": {
+      "default": {
+        "name": "顧客サービス",
+        "description": "知識の検索、顧客メモ、返信とフォローアップ、添付ファイルの処理、成果物と日程を統合し、サービス業務に適合させます。"
+      }
+    },
+    "creativeStudio": {
+      "default": {
+        "name": "創作",
+        "description": "メディア、画布、素材、オフィス、ファイル、プロジェクト記憶、調査とブラウザ参考資料、協業と日程を組み合わせ、創作タスクに適合させます。"
+      }
+    },
+    "app": {
+      "developer": {
+        "name": "組み込みアプリ",
+        "description": "アプリエリアで通常のアプリを作成、インポートと変更し、実行コマンドを設定し、NomiFunを必要に応じて読み取ります。"
+      }
+    }
+  },
+  "modules": {
+    "modelManagement": {
+      "name": "モデル管理",
+      "description": "セッションの提供する設定に基づいて、提供商とモデルを追加し、プロトコルの要求と既存の設定を確認します。既存モデルを上書きコピーしたり、デフォルトモデルを切り替えたりすることはありません。"
+    },
+    "knowledgeManagement": {
+      "name": "知識庫管理",
+      "description": "知識庫、新規資料とウェブサイトソースを新規作成・管理します。 本機インストールのownerのみ可用で、新規の庫は必要に応じてセッションで選択できます。"
+    },
+    "sessionManagement": {
+      "name": "セッションと端末管理",
+      "description": "セッション、端末と協業タスクを列挙し、指定された空のセッションに要求を送信します。 本機インストールのownerのみ可用です。"
+    },
+    "agentCollaboration": {
+      "name": "Agent協業",
+      "description": "境界のある作業を委派し、許可されたAgentタスクを派生し、ユーザー判断を要求します。"
+    },
+    "automationSchedule": {
+      "name": "定时任务",
+      "description": "外部に调度器内部メカニズムを明らかにせずに、永続的な計画を作成・管理します。"
+    },
+    "browser": {
+      "name": "ブラウザ",
+      "description": "接続されたブラウザの観察と操作。利用可能な操作はブラウザによって異なり、macOSでは通常ページとフォーム操作がサポートされ、高度なジェスチャーと自動ファイル転送は未対応。Providerは権限を拡大しません。"
+    },
+    "channelMessaging": {
+      "name": "チャネルメッセージ",
+      "description": "使用するチャネルを通じてメッセージを返信・送信します。"
+    },
+    "companion": {
+      "name": "友達",
+      "description": "選択した友達の学習と進化を製品境界内にします。"
+    },
+    "companionMemory": {
+      "name": "友達記憶",
+      "description": "選択した友達の記憶を読み書きします。"
+    },
+    "computer": {
+      "name": "コンピュータ制御",
+      "description": "優先的にデスクトップの観察、アプリ操作とクリップボードを実行し、必要に応じて前方デスクトップを使用します。利用可能な操作はプラットフォーム、アプリとシステム権限によって制限されます。"
+    },
+    "creationMedia": {
+      "name": "メディア創作",
+      "description": "設定された生成サービスを通じて、テキスト、画像、動画、音声と音楽を創作します。"
+    },
+    "creativeWorkshop": {
+      "name": "$t(agentSettings.template.creativeStudio.default.name)",
+      "description": "キャンバス、素材と可復用な創作テンプレートの処理を行います。"
+    },
+    "customerService": {
+      "name": "顧客サービス",
+      "description": "サービスメモの読み取りと更新や、労働力を人力に転交します。"
+    },
+    "knowledge": {
+      "name": "知識庫",
+      "description": "Agentが使用する知識庫の検索、読み取りと更新を行います。"
+    },
+    "office": {
+      "name": "オフィス文書",
+      "description": "ドキュメント、シートとスライドのプレビューと編集を行います。"
+    },
+    "projectMemory": {
+      "name": "プロジェクト記憶",
+      "description": "選択したプロジェクトの持久記憶を読み書きします。"
+    },
+    "requirements": {
+      "name": "要件",
+      "description": "要件プラットフォームの作業を読み取り、作成、更新と認領します。"
+    },
+    "robot": {
+      "name": "ロボット",
+      "description": "接続されたロボットデバイスの観察と制御を行います。"
+    },
+    "ssh": {
+      "name": "SSH",
+      "description": "選択したSSHホストでファイル読み取りまたは承認されたコマンドを実行します。"
+    },
+    "webResearch": {
+      "name": "Web調査",
+      "description": "公開ソースを検索・ウェブページを読み取り、ブラウザのログイン状態は使用しません。"
+    },
+    "workspaceArtifacts": {
+      "name": "成果物",
+      "description": "ワークスペースファイルを検証可能な成果物として固化します。または、成果物IDで発行された内容を読んで取り込みます。"
+    },
+    "workspaceFiles": {
+      "name": "ワークスペース読み書き",
+      "description": "パスに沿ってワークスペースのファイル読み取り、検索、作成と変更を行います。"
+    },
+    "workspaceProcess": {
+      "name": "本地プロセス",
+      "description": "ワークスペースでローカルコマンドの起動、観察と制御を行います。"
+    },
+    "workspaceVcs": {
+      "name": "バージョン制御",
+      "description": "選択したワークスペースのバージョン制御状態を確認し、明確に変更を行います。"
+    },
+    "appHosting": {
+      "name": "NomiFunアプリ開発",
+      "description": "セッションの中でアプリを作成・インポートと変更し、コマンドを設定し、使用をプレビューします。必要に応じてプラットフォーム接続ガイドを読んで取り込みます。"
+    }
+  },
+  "actionLabels": {
+    "knowledge_management_list": "知識庫を列挙",
+    "knowledge_management_inspect": "庫の情報とドキュメントディレクトリを確認",
+    "knowledge_management_create": "知識庫を新規作成",
+    "knowledge_management_update": "庫の情報とウェブサイトソースを更新",
+    "knowledge_management_delete": "知識庫を削除",
+    "session_management_list": "セッションを列挙",
+    "session_management_status": "セッションの状態を確認",
+    "session_management_create": "セッションを新規作成",
+    "session_management_send_input": "他のセッションにリクエストを送信",
+    "session_management_cancel_turn": "セッションの現在のタスクをキャンセル",
+    "session_management_terminal_list": "端末を列挙",
+    "session_management_terminal_create": "端末を新規作成",
+    "session_management_terminal_read": "端末の出力を読んで取り",
+    "session_management_terminal_input": "端末に入力を送信",
+    "session_management_terminal_relaunch": "端末を再起動",
+    "session_management_terminal_stop": "端末を停止",
+    "session_management_execution_list": "協業タスクを列挙",
+    "session_management_execution_status": "協業タスクの状態を確認",
+    "session_management_execution_retry_step": "協業タスクのステップを再試行",
+    "session_management_execution_adjust": "協業タスクを調整",
+    "session_management_execution_cancel": "協業タスクをキャンセル",
+    "inspect": "設定とプロトコルを確認",
+    "create_provider": "提供商を追加",
+    "add_model": "モデルを追加",
+    "search": "検索",
+    "fetch": "ウェブページを読んで取り",
+    "read": "読んで取り",
+    "write": "書き込み",
+    "autogen": "知識を生成",
+    "recall": "記憶を呼び出す",
+    "delegate": "委派",
+    "fork": "派生",
+    "request_user_decision": "ユーザーに判断を委ねる",
+    "list": "リストを確認",
+    "create": "新規作成",
+    "update": "更新",
+    "delete": "削除",
+    "edit": "編集",
+    "launch": "アプリを起動",
+    "observe": "観察",
+    "navigate": "ナビゲート",
+    "act": "操作",
+    "render_content": "ページ内容を読んで取り",
+    "download": "ダウンロード",
+    "upload": "アップロード",
+    "evaluate": "スクリプトを実行",
+    "reply": "返信",
+    "send": "送信",
+    "learn": "学習",
+    "evolve": "進化",
+    "notes_read": "メモを読んで取り",
+    "notes_write": "メモを書き込み",
+    "handoff": "人力に転交",
+    "text": "テキストを創作",
+    "image": "画像を生成",
+    "image_edit": "画像を編集",
+    "video": "動画を生成",
+    "audio": "音声を生成",
+    "music": "音楽を創作",
+    "canvas_read": "画布を読んで取り",
+    "canvas_edit": "画布を編集",
+    "asset_read": "素材を読んで取り",
+    "asset_write": "素材を書き込み",
+    "template_run": "テンプレートを実行",
+    "preview": "プレビュー",
+    "document_edit": "ドキュメントを編集",
+    "sheet_edit": "スプレッドシートを編集",
+    "slides_edit": "スライドを見せる編集",
+    "publish": "公開",
+    "serve": "サービスを提供",
+    "status": "状態を確認",
+    "diff": "変更を確認",
+    "stage": "変更を暂存",
+    "commit": "コミットを作成",
+    "push": "プッシュ",
+    "exec": "コマンドを実行",
+    "start": "プロセスを開始",
+    "poll": "プロセスの出力を読んで取り",
+    "input": "入力を送信",
+    "close_stdin": "標準入力を閉じる",
+    "resize": "端末を調整",
+    "cancel": "プロセスをキャンセル",
+    "fs_read": "リモートファイルを読んで取り",
+    "fs_write": "リモートファイルに書き込む",
+    "sudo": "特権コマンドを実行",
+    "claim": "作業を認領",
+    "vision": "ロボットビジョンを使用",
+    "display": "ロボットディスプレイを使用",
+    "motion": "運動を制御",
+    "device": "デバイスツールを使用",
+    "tool_discovery_rank": "ツールを発見",
+    "guide": "アプリ開発ガイドを読んで取り"
+  },
+  "effects": {
+    "pure": "外部効果なし",
+    "read_local": "ローカルデータを読み取り",
+    "read_sensitive": "機密データを読み取り",
+    "write_reversible": "取り消し可能な変更",
+    "write_durable": "永続的な変更",
+    "execute_local": "本機で実行",
+    "external_transmit": "外部にデータを送信",
+    "destructive": "破壊的な操作",
+    "irreversible": "不可逆操作",
+    "physical": "物理的な動作"
+  },
+  "availability": {
+    "offline": "選択したデバイスが現在オフラインです。再接続してディレクトリを更新してください。",
+    "permission_denied": "システム権限が拒否されました。関連するシステム設定で権限を付与してからディレクトリを更新してください。",
+    "missing_hardware": "互換性のあるデバイスが接続されていません。デバイスを接続してディレクトリを更新してください。",
+    "no_desktop": "現在の環境ではデスクトップ制御ができません。",
+    "unsupported_platform": "現在のプラットフォームではこのモジュールはサポートされていません。",
+    "unknown": "一時的に可用性を確認できません。ディレクトリを更新してから再度お試しください。"
+  },
+  "sections": {
+    "basic": "基本情報",
+    "basicHint": "このAgentの明確な名前と用途を定義してください。",
+    "behavior": "ロールと作業方法",
+    "behaviorHint": "ロールを定義し、仕事を完了するために望む作業方法を説明してください。",
+    "capabilities": "能力モジュール",
+    "capabilitiesHint": "製品モジュールをまず選択し、許容する具体的な操作を絞り込む"
+  },
+  "fields": {
+    "name": "名前",
+    "namePlaceholder": "このAgentにわかりやすい名前を付けてください",
+    "description": "用途",
+    "descriptionPlaceholder": "このAgentが得意なこと、適したシーンを説明してください",
+    "defaultModel": "デフォルトモデル",
+    "defaultModelPlaceholder": "デフォルトモデルを設定しない",
+    "defaultModelHint": "空欄のままにすることもできます。セッションを作成する際に選択できます。",
+    "defaultModelFailed": "このモデルを設定できません。再試行するか、モデル設定を確認してください。",
+    "persona": "ロール定位",
+    "personaPlaceholder": "例えば：あなたは厳密でフレンドリーな研究助手です。複雑な問題をわかりやすく説明するのが得意です。",
+    "instructions": "作業要求",
+    "instructionsPlaceholder": "例えば：まず結論を出し、次にその根拠を説明してください。情報が不確かな場合は、必ず不確実だと明示してください。"
+  },
+  "status": {
+    "dirty": "未保存",
+    "saved": "保存済み",
+    "currentRevision": "現在の不可変Revision {{revision}}",
+    "noRevision": "このDraftには、まだ保存済みのRevisionがありません。",
+    "boundTargets": "{{count}} 個の使用先",
+    "unsavedChanges": "保存されていない変更があります。保存すると、新規セッションにのみ適用されます。",
+    "revisionImmutable": "保存済みのRevisionは不可変です。編集を続けると、次のRevisionが作成されます。"
+  },
+  "capabilities": {
+    "search": "能力とソースPackageを検索",
+    "notSelected": "有効化されていません",
+    "emptySelection": "この集合にはまだ能力がありません。",
+    "emptyCatalog": "一致する能力はありません。",
+    "source": "ソース",
+    "catalogUnavailable": "現在のインストールでは、この能力の実行可能な実装を提供していません。",
+    "unavailableReason": "現在のインストールでは、この能力の実行可能な実装を提供していないため、選択できません。",
+    "modeAria": "「{{name}}」の能力モードを設定",
+    "tools": "{{count}} 個のaction",
+    "contexts": "{{count}} 個のContext contributor",
+    "enabled": "有効化"
+  },
+  "resources": {
+    "noneRequired": "具体的なリソースは不要",
+    "requiredCount": "{{count}} 種類の関連リソース",
+    "bindingStatus": "リソースの状態",
+    "bindingStatusHint": "これらは、能力が使用する可能性のあるリソースの種類です。具体的なオブジェクトは、セッションやシーンで必要に応じてバインドされます。",
+    "requiredAtUse": "使用する可能性あり",
+    "pickerTitle": "セッションリソース",
+    "pickerHint": "本当に今回使用するもののみを選択してください。未バインドのリソースに関連する拡張機能は無効になりますが、Agentの他の能力の使用はブロックされません。",
+    "companionBindingHint": "このサイドバーと友達のチャット記録と設定を共有します。チャネルと友達は必要に応じて選択します。選択しない場合でも、基本的なチャットと友達記憶を使用できます。",
+    "ready": "リソースは準備済み",
+    "missingCount": "まだ選択する必要があります {{count}} 項目",
+    "selectPlaceholder": "{{resource}}を選択してください",
+    "selectDependency": "まず{{resource}}を選択してください",
+    "selectAria": "{{resource}}を選択してください",
+    "dependencyHint": "{{resource}}を選択すると、関連するリソースが表示されます。",
+    "selectionHint": "起動時に使用するリソースを選択します。次回起動前に変更できます。",
+    "mcpSelectionHint": "Agentが権限を持つツールを含むMCPサーバーの全リスト。 MCPリソース能力が選択されている場合、別のリソースサーバーを別途選択できます（合計16個まで）。多選択してもツールの権限は増えず、関連リソースの読み取りにはバインドされたサーバーの指定が必要です。",
+    "emptyOptions": "利用可能なリソースはありません。まず設定を完了してください。",
+    "emptyOptional": "利用可能なリソースはありません。他の能力を使用して継続できます。",
+    "loadFailed": "リソースリストの読み込みに失敗しました。設定ページを確認してください。",
+    "robotPhases": {
+      "offline": "オフライン - ロボットアクションは一時的に利用できませんが、Agentの他の能力には影響しません。",
+      "idle": "接続済み、空闲",
+      "listening": "接続済み、聆听中",
+      "speaking": "接続済み、話中"
+    },
+    "robotPermissions": {
+      "vision": "カメラ",
+      "motion": "運動",
+      "display": "ディスプレイ",
+      "device_tools": "デバイスツール",
+      "proactive_speech": "自動音声",
+      "continuous_vision": "継続的ビジョン"
+    },
+    "robotPermissionsReady": "以下の権限が開放されました：{{permissions}}",
+    "robotPermissionsMissing": "以下の権限が開放された後に利用できます：{{permissions}}",
+    "robotHardwareMissing": "このデバイスには提供されません：{{permissions}}",
+    "robotPermissionsNotRequired": "このAgentにはロボットアクション権限は必要ありません",
+    "browser": {
+      "managed": "NomiFunブラウザ",
+      "attached": "Chromeを開いた",
+      "scope": "Chromeを開いた 指 NomiFunを実行するコンピュータ上のブラウザ。接続はChromeを起動・閉じたり、プロファイルをコピーしたりすることはありません。既存のタグページを観察・操作できますが、タグページの新規作成、アップロードとダウンロードは未対応。",
+      "setup": "macOSまたはWindowsでChrome 144以上を開き、chrome://inspect/#remote-debuggingでリモートデバッグを有効化し、Chromeの提示を承認し、接続をクリックします。",
+      "connect": "Chromeに接続",
+      "connectionNeeded": "選択したChromeの接続を確認してください",
+      "disconnect": "接続を切断",
+      "refresh": "状態の更新",
+      "failed": "接続操作を完了できませんでした。Chromeのリモートデバッグ設定を確認し、状態の更新をしてみたり、既存セッションでChromeを使用している場合は、まず作業を完了してから切断してください。",
+      "selectedUnavailable": "現在のセッションで開いたChromeを選択し続けます。再度接続するか、NomiFunブラウザに明確に変更してから開始してください。",
+      "states": {
+        "disconnected": "まだChromeに接続されていません",
+        "connected": "Chromeに接続済み",
+        "connection_lost": "Chromeの接続が失われました",
+        "disconnecting": "接続の切断中",
+        "cleanup_failed": "Chromeの切断を確実に確認できません"
+      }
+    },
+    "configure": "設定へ移動",
+    "bindingPolicyTitle": "能力の許可とリソースのバインディングを別々に管理",
+    "bindingPolicyBody": "Agentの設定では、許可する能力を決定します。セッションやシーンで、知識庫、ワークスペース、デバイスと接続をバインドします。未バインドまたは実行環境が未準備な場合、影響を受けるツールのみ無効になり、Agentの他の能力の使用はブロックされません。",
+    "kinds": {
+      "assetLibrary": "アセットライブラリ",
+      "browser": "ブラウザリソース",
+      "canvas": "画布",
+      "channel": "チャネル",
+      "companion": "友達",
+      "companionMemory": "友達記憶",
+      "computer": "コンピュータ制御",
+      "customer": "客服Agent",
+      "generationProvider": "生成サービス",
+      "knowledgeBase": "知識庫",
+      "mcpConnection": "MCP接続",
+      "processSession": "プロセスセッション",
+      "projectMemory": "プロジェクト記憶",
+      "robot": "ロボット",
+      "sshHost": "SSHホスト",
+      "terminal": "ターミナルセッション",
+      "workspace": "ワークスペース"
+    }
+  },
+  "inspector": {
+    "snapshot": "SnapshotとRuntimeProfile",
+    "protocol": "Runtimeプロトコル"
+  },
+  "common": {
+    "none": "なし",
+    "noChanges": "変更はありません",
+    "available": "利用可能",
+    "unavailable": "利用できません"
+  },
+  "errors": {
+    "title": "Agentワークベンチの操作が未完了",
+    "presetCapabilitiesLoadFailed": "選択したAgentの能力を読み込めませんでした。再試行するか、他のAgentを選択してください。",
+    "routeUnavailable": "現在のバージョンでは最新Agentワークフローを提供していません。バージョンを更新するか、対応サービスを再起動してから再度お試しください。",
+    "network": "ローカルサービスに接続できません。NomiFunが実行中であることを確認してから再試行してください。",
+    "timeout": "操作が指定時間内に完了しませんでした。再度お試しください。結果が不明確な場合は、既存のセッションを確認してから再度お試しください。",
+    "presetNotFound": "このAgentはもはや存在しません。Agentワークベンチを再読み込みしてください。",
+    "sessionDeleted": "このセッションは削除されました。続きはできません。",
+    "sessionNotFound": "このセッションは利用できません。他のAgent設定を選択してください。",
+    "snapshotUnavailable": "現在のNomiRuntimeでは、この保存済み設定を実行できません。利用可能な設定から新規セッションを作成してください。",
+    "resource": "続行する前に、このAgentに必要なリソースを選択または設定してください。",
+    "capability": "選択したモジュールまたは操作の1つ以上が使えなくなりました。高さを表示した項目を確認してから再度保存してください。",
+    "model": "この設定を保存する前に、使える会話モデルを選択してください。",
+    "conflict": "この設定は他の場所で変更されています。再読み込みしてから再度保存してください。",
+    "runtime": "NomiRuntimeがこの操作を開始できません。選択したモデルとモジュールをチェックしてから再度お試しください。",
+    "unknown": "Agentの操作が完了しませんでした。選択したモデルとモジュールをチェックしてから再度お試しください。",
+    "diagnosticSubjects": "以下の項目を確認してください：{{subjects}}"
+  },
+  "navigation": {
+    "railTitle": "Agentワークベンチ"
+  },
+  "workbench": {
+    "categories": {
+      "knowledge": "知識と記憶",
+      "development": "ファイルと開発",
+      "web": "ウェブとブラウザ",
+      "collaboration": "協業とメッセージ",
+      "creation": "創作とコンテンツ",
+      "automation": "自動化",
+      "devices": "デバイスと制御",
+      "integrations": "スキルと拡張"
+    },
+    "needsAttention": "処理が必要",
+    "allCategories": "全部分類",
+    "filterStatus": "有効化フィルター",
+    "extension": "拡張と接続",
+    "missingReason": "このモジュールのソースはもはや存在しません。取り除くか、対応する拡張機能を復元してから再度使用できます。",
+    "results": "{{count}} 項目",
+    "noResultsHint": "他のキーワードを試すか、分類と状態のフィルターを調整してください。",
+    "clearFilters": "フィルターをクリア",
+    "librarySearch": "Agentを検索",
+    "mine": "私のAgent",
+    "official": "公式",
+    "noAgents": "一致するAgentはありません",
+    "officialHint": "この設定を保存すると、あなたのAgentになります。公式テンプレートは常に最新のバージョンを提供します。",
+    "myHint": "あなたの仕事に適したAgentを準備してください",
+    "capabilityTab": "モジュールと操作",
+    "settingsTab": "名前と行動",
+    "runtimeTab": "実行戦略",
+    "extensionsTab": "実行拡張",
+    "customizeTitle": "このテンプレートをカスタマイズ",
+    "customizeHint": "能力を自由に調整して、あなたのAgentとして保存します。公式テンプレートはいつでも使用できます。",
+    "pendingChanges": "保存されていない変更があります",
+    "savedHint": "すべての変更が保存されました",
+    "saveHint": "この保存済みRevisionは新規セッションにのみ使用できます。",
+    "previewCompileHint": "保存時にサービスエンドで正確な操作、コンパチビリティ、Providerとリソースの要求をコンパイルします。",
+    "resetChanges": "変更を元に戻す",
+    "leaveTitle": "保存していない変更があります",
+    "leaveBody": "移動後に、これらの変更は破棄されます。",
+    "keepEditing": "編集を続ける",
+    "discardAndLeave": "破棄して移動",
+    "resetTitle": "今回の変更を元に戻しますか？",
+    "resetBody": "前回保存した設定に戻ります。",
+    "saveSuccess": "Agent設定が保存されました",
+    "selectedHint": "シーンごとに能力モジュールを選択し、許容する具体的な操作を絞り込む",
+    "settingsHint": "個体性、モデルと仕事のスタイルを定義する",
+    "manageModels": "モデル管理へ移動",
+    "runtimePolicyNeeded": "「ルール+旁路モデル」を選択してから旁路モデルを選択してください。",
+    "returnChanged": "离开期间此 Agent 已发生变化。已打开当前保存版本，未套用先前未保存的输入。",
+    "disabledSave": "使えないモジュールや操作を処理してから保存してください",
+    "presetBadge": "カスタマイズ可能",
+    "personalBadge": "個人Agent",
+    "officialBadge": "個人設定 · 公式テンプレートベース",
+    "officialSaveHint": "選択した保存済みAgentを使用すると、この設定が適用されます。公式テンプレートは常に最新のバージョンを提供します。既存の友達セッションは、友達設定でこの保存設定を選択して更新できます。",
+    "createCopy": "コピーを作成",
+    "openCompanions": "友達を開く",
+    "openCustomerService": "客服を開く",
+    "companionCoreNeeded": "友達には、友達の人格と記憶を保持するための友達能力が必要です。他の能力を追加し続けるか、カスタマイズされた別のコピーを作成できます。",
+    "editIdentity": "Agentの情報を編集",
+    "editName": "Agentの名前を変更",
+    "createHint": "空白から作成",
+    "createTitle": "新しいAgentを作成",
+    "changeBlocked": "モジュールを変更できません",
+    "changeBlockedBody": "以下のモジュールは、利用できない依存関係が存在するか、バージョン競合または競合関係があります：{{names}}。先に処理してから再度お試しください。",
+    "relatedChanges": "関連する変更を調整",
+    "enableDependencies": "以下の依存モジュールを同時に有効にする必要があります：{{names}}。",
+    "disableDependents": "以下のモジュールに依存するモジュールは、選択されたモジュールとともに無効になります：{{names}}。",
+    "undo": "1つ前を元に戻す",
+    "enabledModules": "現在の有効モジュール",
+    "resourceModules": "リソース関連モジュール",
+    "moduleGuide": "表示されるリストは、直接設定できるモジュールと、現在選択しているモジュールに依存するだけ読み取り専用モジュールです。SkillとMCPのバインディング詳細は「スキルと拡張」で確認できます。",
+    "dependencyBadge": "依存関係で選択",
+    "dependencyActive": "依存関係で有効化",
+    "dependencyHint": "{{names}}に依存します。保存時に、一緒に凍結されますが、ここでは個別にオン・オフできません。",
+    "dependencyActionPermissions": "依存するモジュールの内部で使える操作",
+    "moduleUnavailableSummary": "使えないモジュール、操作や実行条件が {{count}} 項目あります。",
+    "searchModules": "モジュール、操作やリソースを検索",
+    "moduleStatus": {
+      "all": "すべて",
+      "enabled": "有効化中",
+      "attention": "処理が必要"
+    },
+    "moduleCategories": "モジュール分類",
+    "moduleCategoryCount": "{{enabled}} 個を有効化、合計 {{total}} 個",
+    "moduleCatalog": "能力モジュールと依存",
+    "enableModule": "{{name}}を有効化",
+    "disableModule": "{{name}}を無効化",
+    "moduleUnavailable": "現在のインストールではこのモジュールは使えません。展開して技術詳細を確認して診断してください。",
+    "systemPermissionMissing": "現在のシステム権限が不足しています：{{permissions}}。モジュールは保存できますが、実際に使用するには権限を付与する必要があります。",
+    "systemPermissionCheckFailed": "一時的にこのモジュールが依存するシステム権限を確認できません。権限センターで確認してください。",
+    "openSystemPermissions": "権限を開く",
+    "actionMissing": "保存済みの操作が使えなくなりました。取り除くか、対応するソースを復元してください。",
+    "actionRequired": "このモジュールを保存する前に、まず操作を選択してください。",
+    "actionCount": "{{count}} 個の操作と貢献",
+    "actionPermissions": "許可された操作",
+    "toggleAction": "{{module}}が{{action}}を実行できるように設定",
+    "removeMissingAction": "{{action}}を無効化",
+    "actionUnavailable": "操作が使えません",
+    "contextOnlyModule": "このモジュールはコンテキストやイベントのみ提供し、個別に選択できる操作はありません。",
+    "moduleTechnicalDetails": "モジュール技術詳細",
+    "availabilityCode": "可用性コード",
+    "noModuleResults": "一致するモジュールはありません",
+    "noModules": "現在のインストールで使えるモジュールはありません",
+    "noModulesHint": "インストールディレクトリを更新するか、Agentモジュールを発布する製品拡張機能を有効化してください。",
+    "firstRunTitle": "出発点を選択",
+    "firstRunHint": "「最小限」は、基礎的な会話と本機ファイル・プロセス操作を提供します。セッション入力ボックスの横でグローバルスキルとMCPを選択できます。",
+    "startMinimal": "最小限から開始",
+    "startCustom": "空白でカスタマイズ",
+    "emptyWorkbenchTitle": "最初のAgentを作成",
+    "emptyWorkbenchHint": "現在、公式テンプレートも個人Agentもありません。まず空白でカスタマイズAgentを作成し、インストールディレクトリからモジュールを追加できます。",
+    "showList": "Agentリストを展開",
+    "hideList": "Agentリストを収める",
+    "saveAsMine": "私のAgentとして保存",
+    "readyToSave": "サービスエンドの検証待ち",
+    "resetTemplate": "プレセット能力を復元",
+    "computerGroups": {
+      "observation": "観察",
+      "interaction": "操作",
+      "application": "アプリケーション",
+      "clipboard": "クリップボード"
+    }
+  },
+  "runtimePolicy": {
+    "title": "実行と遵守",
+    "hint": "このAgentが新規セッションを作成する際に使用する復元戦略を設定します。戦略はRevisionごとに固化され、既存セッションには追記されません。",
+    "noCapabilityGrant": "能力や権限を追加しません",
+    "flowLabel": "IDMM戦略の継承方法",
+    "flow": {
+      "agent": {
+        "title": "Agentデフォルト値",
+        "description": "不可変Revisionとして現在の設定を保存します"
+      },
+      "session": {
+        "title": "新規セッションを凍結",
+        "description": "作成時に現在の設定をコピーし、後で変更したデフォルト値は読み取りません"
+      },
+      "override": {
+        "title": "セッションで上書き可能",
+        "description": "カプセルは現在のセッションのみを変更し、Agentには反書き込みしません"
+      }
+    },
+    "applyNote": "Agent保存後に新規セッションにのみ適用されます。既存セッションは、それぞれ凍結された設定を引き続き使用します。",
+    "busy": "Agentの保存処理中です。しばらくお待ちください。"
+  }
+}

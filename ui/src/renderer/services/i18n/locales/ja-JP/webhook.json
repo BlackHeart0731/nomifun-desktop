@@ -1,0 +1,56 @@
+{
+  "label": "Webhook",
+  "title": "Webhook管理",
+  "columns": {
+    "name": "名前",
+    "platform": "プラットフォーム",
+    "url": "URL",
+    "description": "説明",
+    "enabled": "有効",
+    "secret": "シークレット",
+    "actions": "操作"
+  },
+  "form": {
+    "createTitle": "Webhookを作成",
+    "editTitle": "Webhookを編集",
+    "name": "名前",
+    "namePlaceholder": "Webhook名を入力",
+    "nameRequired": "名前は必須です",
+    "platform": "プラットフォーム",
+    "url": "URL",
+    "urlPlaceholder": "Webhook URLを入力",
+    "urlRequired": "URLは必須です",
+    "secret": "署名シークレット",
+    "secretPlaceholder": "署名シークレット（任意）",
+    "secretHint": "編集中は空のままにすると既存のシークレットを保持します",
+    "clearSecret": "シークレットをクリア",
+    "description": "説明",
+    "descriptionPlaceholder": "説明を入力（任意）",
+    "enabled": "有効"
+  },
+  "platform": {
+    "lark": "Lark / Feishu",
+    "http": "汎用HTTP",
+    "slack": "Slack"
+  },
+  "secret": {
+    "configured": "設定済み",
+    "notConfigured": "未設定"
+  },
+  "actions": {
+    "create": "Webhookを作成",
+    "edit": "編集",
+    "delete": "削除",
+    "test": "テスト",
+    "deleteConfirm": "このWebhookを削除してもよろしいですか？"
+  },
+  "messages": {
+    "createOk": "Webhookを作成しました",
+    "updateOk": "Webhookを更新しました",
+    "deleteOk": "Webhookを削除しました",
+    "testOk": "Webhookテストに成功しました",
+    "testError": "Webhookテストに失敗しました: {{error}}",
+    "loadError": "Webhookの読み込みに失敗しました"
+  },
+  "empty": "Webhookがまだありません"
+}

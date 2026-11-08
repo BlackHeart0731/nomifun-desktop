@@ -1,0 +1,18 @@
+{
+  "selectFile": "ファイルを選択",
+  "selectDirectory": "フォルダを選択",
+  "pleaseSelectFile": "ファイルを選択してください",
+  "pleaseSelectDirectory": "フォルダを選択してください",
+  "allFiles": "すべてのファイル",
+  "newFolder": "新規フォルダ",
+  "newFolderName": "フォルダ名",
+  "createFolder": "フォルダを作成",
+  "createFolderSuccess": "フォルダを作成しました",
+  "folderNameRequired": "フォルダ名を入力してください",
+  "selectParentForNewFolder": "先に親フォルダを選択してください",
+  "emptyFolder": "このフォルダは空です",
+  "currentLocation": "現在の場所",
+  "selectedLocation": "選択済み",
+  "truncated": "最初の500件のみ表示しています",
+  "parentDirectory": "親フォルダ"
+}

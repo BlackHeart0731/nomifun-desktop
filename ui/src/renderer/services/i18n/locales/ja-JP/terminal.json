@@ -1,0 +1,138 @@
+{
+  "newTerminal": "新規ターミナル",
+  "category": "ターミナル",
+  "untitled": "ターミナル",
+  "empty": "ターミナルがまだありません",
+  "conversationPanel": {
+    "tab": "会話ターミナル",
+    "summary": "合計 {{total}}、実行中 {{running}}",
+    "empty": "この会話に属するターミナルがありません",
+    "status": "ステータス",
+    "stopping": "停止中",
+    "cwd": "作業ディレクトリ",
+    "command": "コマンド",
+    "exitCode": "終了コード",
+    "output": "ターミナル出力",
+    "noOutput": "出力がまだありません",
+    "closeConfirm": "「{{name}}」を閉じますか？実行中のプロセスは終了します。",
+    "remove": "記録を削除",
+    "removeConfirm": "「{{name}}」のターミナル記録を削除しますか？"
+  },
+  "extended": {
+    "autoworkApplyFailed": "ターミナルは作成されましたが、AutoWorkの有効化に失敗しました — ターミナル内で再試行してください",
+    "autoworkDesc": "要件タグで自動タスクにこのターミナルを駆動させます（Claude / Codex、stepcode claudeなどのラッパーを含む）",
+    "autoworkLabel": "AutoWork",
+    "autoworkRequiresAgent": "AutoWorkにはClaude / Codexターミナルが必要です（stepcode claudeなどのラッパーを含む）",
+    "knowledgeConnectNote": "プラットフォーム管理のターミナルはこれを自動的に注入します。ラッパー、カスタムコマンド、外部ターミナルはワークスペースに認証不要のコマンドを登録できます。",
+    "knowledgeDesc": "このターミナルのエージェントが検索できるようにナレッジベースをワークスペースにマウントします。",
+    "knowledgeLabel": "プラットフォームナレッジ",
+    "subtitle": "このターミナルで起動するエージェントCLIにプラットフォーム機能を公開",
+    "title": "拡張機能"
+  },
+  "registerKnowledge": {
+    "button": "プラットフォームナレッジを接続",
+    "buttonCompact": "ナレッジを接続",
+    "confirm": "接続",
+    "cwdRequired": "先に作業ディレクトリを選択してください",
+    "modalDesc": "CLIを選択し、既存設定を上書きせずにナレッジMCPコマンドをその設定にマージします。",
+    "modalTitle": "プラットフォームナレッジを接続",
+    "securityDesc": "ポートや認証情報は保存されません。起動時に、現在のOSユーザー向けに保護されたローカルチャネル経由でワークスペーススコープのアクセスがCLIに付与されます。NomiFunが実行中である必要があります。",
+    "codexScope": "ユーザーレベルの設定に書き込みます",
+    "projectScope": "プロジェクト設定に書き込みます"
+  },
+  "batchSelect": "選択",
+  "selectAll": "すべて選択",
+  "batchDelete": "削除 ({{count}})",
+  "batchDeleteTitle": "ターミナルを削除",
+  "batchDeleteContent": "{{count}} 件のターミナルセッションを削除しますか？実行中のプロセスは終了します。",
+  "batchDeleteDone": "{{count}} 件のターミナルを削除しました",
+  "relaunch": "再起動",
+  "fallbackShell": "シェルにフォールバック",
+  "fallbackShellTip": "停止したClaude / Codexを終了し、その場でクリーンなシェルに戻します（Ctrl+Cの連打でもトリガーされます）",
+  "fallbackShellDone": "シェルに戻しました",
+  "loadNotFound": "ターミナルセッションが見つかりません。",
+  "loadFailed": "ターミナルセッションの読み込みに失敗しました。",
+  "activationFailed": "ターミナルの有効化に失敗しました。再試行するかセッションを再起動してください。",
+  "inputFailed": "ターミナル入力の送信に失敗しました。",
+  "statusExited": "終了 ({{code}})",
+  "composerPlaceholder": "コマンドを入力して送信するとターミナルで実行されます",
+  "quickCommand": {
+    "clear": "ターミナルをクリア",
+    "interrupt": "Ctrl-Cを送信（中断）"
+  },
+  "preset": {
+    "shell": "カスタム",
+    "claude": "Claude",
+    "codex": "Codex",
+    "gemini": "Gemini"
+  },
+  "create": {
+    "title": "新規ターミナル",
+    "subtitle": "作業ディレクトリと（任意で）起動するエージェントを選択してください。",
+    "workspace": "作業ディレクトリ",
+    "workspacePlaceholder": "フォルダを選択（そこでcdを実行）",
+    "workspaceUnavailable": "選択した作業ディレクトリ「{{workspacePath}}」が存在しないかアクセスできません。起動前に復元するか、既存のディレクトリを選択してください。",
+    "recent": "最近",
+    "chooseFolder": "別のフォルダを選択",
+    "preset": "起動",
+    "presetHint": "起動方法としてエージェントCLI（Claude / Codex / Gemini …）を選択",
+    "knowledge": "ナレッジベース",
+    "knowledgePlaceholder": "任意 — マウントするナレッジベースを選択",
+    "knowledgeHint": "作業ディレクトリの .nomi/knowledge/ にマウントされます。セッションは拡張ナレッジソースとして読み取ります。",
+    "command": "起動コマンド",
+    "commandHint": "起動コマンドをカスタマイズできます。ターミナル作成時に自動的に注入されます。",
+    "mcpPanel": {
+      "claudeCommand": "Claudeシェルコマンド",
+      "claudeJson": "Claude .mcp.json",
+      "claudePowerShellCommand": "Claude PowerShellコマンド",
+      "codexToml": "Codex config.toml",
+      "description": "テンプレートには起動コマンドのみが含まれ、ポートや認証情報は含まれません。起動時に、外部CLIは現在のOSユーザー向けに保護されたローカルチャネル経由でワークスペーススコープのアクセスを受け取ります。NomiFunが実行中である必要があります。",
+      "geminiJson": "Gemini settings.json",
+      "loading": "読み込み中...",
+      "title": "高度: 他のCLI / 外部ターミナルの手動登録",
+      "unavailable": "プラットフォームツールAPIが利用できません"
+    },
+    "recentCommands": "最近使用したコマンド",
+    "commandRequired": "起動コマンドを入力してください",
+    "launch": "起動"
+  },
+  "knowledge": {
+    "applyLiveNote": "マウントと書き戻しの変更はこのセッションに即時適用されます。ナレッジ取得ツールなしで起動したセッション（カスタムコマンドなど）は、注入するために再起動してください。"
+  },
+  "newConversation": "新規会話",
+  "action": {
+    "pin": "ピン留め",
+    "unpin": "ピン留め解除",
+    "rename": "名前を変更",
+    "delete": "削除",
+    "close": "閉じる",
+    "wake": "復帰",
+    "restart": "再起動"
+  },
+  "hoverCard": {
+    "name": "セッション名",
+    "id": "セッションID",
+    "status": "ステータス",
+    "cwd": "ワークスペース",
+    "command": "コマンド",
+    "backend": "バックエンド / モード",
+    "statusRunning": "実行中",
+    "statusExited": "終了",
+    "statusError": "エラー"
+  },
+  "renameTitle": "ターミナル名を変更",
+  "renamePlaceholder": "ターミナル名を入力",
+  "deleteConfirmTitle": "ターミナルを削除",
+  "deleteConfirmContent": "このターミナルセッションを削除しますか？実行中のプロセスは終了します。",
+  "submitHint": "Enterで実行",
+  "autowork": {
+    "requiresAgentCli": "AutoWorkにはエージェントCLIターミナルが必要です（Claude / Codex、stepcode claudeなどのラッパーを含む）",
+    "terminalExited": "ターミナルが終了しました — AutoWorkを使用するには再起動してください"
+  },
+  "workspace": {
+    "title": "プロジェクト",
+    "expand": "ワークスペースを展開",
+    "collapse": "ワークスペースを折りたたむ",
+    "ariaLabel": "ターミナルワークスペース"
+  }
+}

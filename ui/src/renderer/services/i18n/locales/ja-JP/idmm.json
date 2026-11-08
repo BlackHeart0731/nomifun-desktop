@@ -1,0 +1,89 @@
+{
+  "title": "スマート判定",
+  "shortLabel": "スマート判定",
+  "description": "プライマリモデルが予期せず停止したとき、またはユーザーに判断を委ねたときにタスクを保護します。ルールが先に実行され、ルールで安全に判断できない場合にのみバイパスモデルが使用されます。",
+  "saved": "スマート判定設定を保存しました",
+  "evaluated": "即時評価が完了しました",
+  "evaluateNow": "今すぐ確認",
+  "seconds": "秒",
+  "recoverProviderFailures": "プロバイダー/ネットワーク障害を回復",
+  "recoverStalledTurns": "無応答モデルの停止を回復",
+  "autoSelectOptions": "安全なオプションを自動選択",
+  "preferRecommended": "推奨オプションを優先",
+  "idleTimeout": "無応答閾値",
+  "bypassModel": "バイパスモデル",
+  "scanScope": "バイパス読み取り範囲",
+  "contextMessages": "最近のメッセージ数",
+  "explanation": {
+    "ruleSource": "ルールガード",
+    "modelSource": "{{model}} の判定",
+    "bypassSource": "バイパスモデル",
+    "recoverySource": "自動回復",
+    "showBasis": "判定根拠",
+    "hideBasis": "根拠を非表示",
+    "viewQuestion": "元の質問を表示",
+    "noBasis": "簡潔な根拠は記録されていません",
+    "basis": {
+      "recommendedOption": "推奨された安全なオプションを選択しました。",
+      "firstSafeOption": "安全チェックを通過した最初のオプションを選択しました。",
+      "safeOption": "安全チェックを通過したオプションを選択しました。",
+      "providerRecovery": "再試行可能なプロバイダー障害がタスクを中断しました。既存のコンテキストから再開しました。",
+      "modelRecovery": "モデルが無応答閾値を超えました。ターンをキャンセルし、タスクを再開しました。",
+      "stalledTool": "ツールが停止しました。効果の重複を避けるため、人の判断を待ちました。",
+      "recoveryLimit": "回復が設定された上限に達しました。自動再試行を停止しました。",
+      "sensitiveInput": "認証情報、支払い、権限には人の判断が必要です。",
+      "destructiveAnswer": "候補に不可逆なアクションが含まれていたため、返信は送信されませんでした。",
+      "unresolvedQuestion": "ルールではこの未解決の質問に安全に答えられません。人の入力が必要です。",
+      "bypassFailed": "バイパスモデルが有効な判定を返しませんでした。返信は送信されませんでした。"
+    }
+  },
+  "notice": {
+    "waitingTitle": "ここでは人の入力が必要でした",
+    "waitingDescription": "スマート判定がこの質問を保留し、情報提供または選択を待っています。",
+    "failedTitle": "ここでは自動判定が完了しませんでした",
+    "failedDescription": "スマート判定はこのステップの返信を提供できませんでした。元の質問と完了した作業は保持されています。",
+    "addInput": "入力を追加"
+  },
+  "mode": {
+    "label": "ガードモード",
+    "off": "オフ",
+    "ruleOnly": "ルールガード",
+    "rulePlusModel": "ルール + バイパスモデル",
+    "ruleOnlyHint": "モデルを使用しません。再試行可能な障害の回復と、最初の安全な明示的オプションの選択が可能です。権限、認証情報、購入、破壊的な選択は常に人の判断を待ちます。",
+    "rulePlusModelHint": "同じ決定論的ルールを先に実行します。未解決のオープン質問や曖昧な選択のみが、有界コンテキスト付きでバイパスモデルに送信されます。"
+  },
+  "scope": {
+    "lastTurn": "最後のターンのみ",
+    "lastMessages": "最近のメッセージ",
+    "fullSession": "フルセッション（文字数制限）"
+  },
+  "state": {
+    "off": "オフ",
+    "monitoring": "有効",
+    "intervening": "介入中",
+    "degraded": "介入失敗"
+  },
+  "interventionStatus": {
+    "pending": "進行中",
+    "succeeded": "回復",
+    "failed": "失敗",
+    "halted": "ユーザー待ち"
+  },
+  "interventionReason": {
+    "tool_stalled_safety_halt": "ツールが進行を停止しました。重複効果を避けるため、人の判断を待ちます",
+    "model_stalled": "プライマリモデルがツール外で無応答閾値を超えました",
+    "recovery_limit_reached": "プロバイダー障害回復が再試行上限に達しました",
+    "provider_fault_detected": "回復可能なプロバイダー、ネットワーク、またはレート制限障害を検出しました",
+    "sensitive_input_required": "認証情報、支払い、権限の入力には人の判断が必要です",
+    "rule_selected_safe_option": "ルールガードが最初の安全なオプションを選択しました",
+    "bypass_model_decision": "ルールでは結論が出ませんでした。バイパスモデルが制約付き判定を返しました",
+    "bypass_model_halted": "バイパスモデルが停止し、人の入力を要求しました",
+    "bypass_model_failed": "バイパスモデルが制約付き判定を生成できませんでした",
+    "rule_cannot_answer": "ルールガードはこのオープン質問に安全に答えられません",
+    "destructive_answer_rejected": "破壊的な候補回答が拒否されました"
+  },
+  "validation": {
+    "bypassRequired": "先にバイパスモデルを選択してください",
+    "noChatModel": "バイパス判定に使用できるチャットモデルがありません"
+  }
+}

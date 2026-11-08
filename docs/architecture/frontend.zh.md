@@ -17,7 +17,7 @@ UI 契约。桌面窗口内的窄内容面板需要收缩时，应使用基于�
 | 路由 | `react-router-dom` v7 + **`HashRouter`**（对 `file://` 风格宿主与刷新安全至关重要） |
 | 数据获取 / 缓存 | SWR |
 | 状态 | React Context（auth、theme、feedback、preview、conversation history）—— 不使用 Redux |
-| i18n | `i18next` + `react-i18next`，语言包 `zh-CN`、`en-US` |
+| i18n | `i18next` + `react-i18next`，语言包 `zh-CN`、`en-US`、`ja-JP` |
 | 编辑器 | Monaco（设置、代码预览）、CodeMirror（更轻量的输入） |
 | Markdown | `react-markdown` + `remark-gfm` + KaTeX + mermaid |
 | 终端 | `xterm.js`（含 `xterm-addon-fit`、`xterm-addon-web-links`） |
@@ -146,7 +146,7 @@ Canvas 导出使用 archive v3 writer，并继续保留 archive v1/v2 reader。
 
 `useTheme` 选择亮暗模式，`useColorScheme` 选择品牌方案，默认方案为 `default`。组件优先使用 semantic token；预设 CSS 由 `AppThemeRuntime` 与 `applyCustomCss` 注入并自动处理 `!important`。亮暗 token 完整对称，选择器覆盖 `:root`/`body`，Arco RGB scale 使用逗号三元组。宽泛选择器、布局属性及外联资源不进入主题；popover alpha 至少 .86，反馈/tooltip 使用实体色，不装饰 `.message-item` 外层。具体作者合同见 [样式规范](../contributing/styling.zh.md)。
 
-i18next 使用 `zh-CN`/`en-US` 静态语言 bundle，共享 [common/config/i18n.ts](../../ui/src/common/config/i18n.ts) 的语言规范化。后端设置是语言真值，localStorage 只提示首帧；通过现役 `changeLanguage`/语言偏好 helper 同步主窗、伙伴及其他 surface，不各自修改实例。复数键由 [localeKeyParity.ts](../../ui/src/renderer/services/i18n/localeKeyParity.ts) 按语言类别验证，不能要求所有语言具有相同复数后缀。
+i18next 使用 `zh-CN`/`en-US`/`ja-JP` 静态语言 bundle，共享 [common/config/i18n.ts](../../ui/src/common/config/i18n.ts) 的语言规范化。后端设置是语言真值，localStorage 只提示首帧；通过现役 `changeLanguage`/语言偏好 helper 同步主窗、伙伴及其他 surface，不各自修改实例。复数键由 [localeKeyParity.ts](../../ui/src/renderer/services/i18n/localeKeyParity.ts) 按语言类别验证，不能要求所有语言具有相同复数后缀。
 
 ## 一点平台特定的 UX
 

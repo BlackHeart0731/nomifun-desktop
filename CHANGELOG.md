@@ -5,6 +5,9 @@ notes at a high level rather than a complete historical log.
 
 ## Unreleased
 
+- Add Japanese (`ja-JP`) as a third interface language; any string without a
+  Japanese translation falls back to English.
+
 ## v0.8.20 - 2026-11-05
 
 - Connect new SSH sessions immediately, add explicit connect/disconnect controls,

@@ -1,0 +1,124 @@
+{
+  "siderTitle": "サポート",
+  "title": "カスタマーサポート",
+  "subtitle": "見知らぬ訪問者に対応するカスタマーサポートエージェントです。ナレッジベースとサービスノートからのみ回答し、危険な機能は登録されません。",
+  "status": {
+    "enabled": "対応中",
+    "disabled": "無効"
+  },
+  "trust": {
+    "readonly": "読み取り専用のツールは3つだけです：ナレッジ検索 / ナレッジ読み取り / サービスノート",
+    "locked": "ターミナル / ファイル / コンピューター / ブラウザの機能は登録されません"
+  },
+  "card": {
+    "noModel": "モデルが設定されていません",
+    "kbCount": "ナレッジベース {{count}} 件"
+  },
+  "create": {
+    "action": "エージェントを作成",
+    "title": "カスタマーサポートエージェントを作成",
+    "done": "エージェントを作成しました"
+  },
+  "empty": {
+    "title": "カスタマーサポートエージェントはまだありません",
+    "desc": "エージェントを作成し、ナレッジベースとサービス方針を紐づけ、チャネルボットを接続すると、訪問者に安全に対応できるようになります。",
+    "action": "最初のエージェントを作成"
+  },
+  "fields": {
+    "name": "名前",
+    "namePlaceholder": "例: サポートアシスタント",
+    "nameRequired": "名前を入力してください",
+    "provider": "モデルプロバイダー",
+    "providerPlaceholder": "プロバイダーを選択",
+    "model": "チャットモデル",
+    "modelPlaceholder": "モデルを選択",
+    "knowledgeBases": "ナレッジベース",
+    "knowledgeBasesPlaceholder": "検索対象のナレッジベースを選択",
+    "greeting": "あいさつ文",
+    "greetingPlaceholder": "訪問者が挨拶したときの最初のメッセージ",
+    "persona": "ペルソナ",
+    "personaPlaceholder": "口調と性格。例: 丁寧、簡潔、事実ベース",
+    "servicePolicy": "サービス方針",
+    "servicePolicyPlaceholder": "対応範囲 / 禁止トピック / コンプライアンス上の表現",
+    "maxConcurrent": "同時実行数の上限"
+  },
+  "detail": {
+    "back": "一覧に戻る",
+    "enabled": "有効",
+    "delete": "削除",
+    "deleteConfirm": "このエージェントを削除しますか？紐づけ、対話、有人引き継ぎ、プライベートノートも削除されます。",
+    "deleted": "エージェントを削除しました",
+    "save": "保存",
+    "saved": "保存しました",
+    "notFound": "エージェントが見つからないか、削除されています",
+    "knowledgeBasesPlaceholder": "紐づけるナレッジベースを選択",
+    "knowledgeBasesMountedCount": "{{count}} 件を紐づけ済み"
+  },
+  "sections": {
+    "identity": "基本情報と言葉づかい",
+    "modelKnowledge": "モデルとナレッジ",
+    "bindings": "チャネルボットの紐づけ",
+    "handoffs": "有人引き継ぎキュー",
+    "notes": "サービスノート"
+  },
+  "handoffs": {
+    "refresh": "更新",
+    "empty": "有人引き継ぎはありません。",
+    "reason": "理由",
+    "status": "ステータス",
+    "statusPending": "待機中",
+    "statusClaimed": "対応中",
+    "statusResolved": "解決済み",
+    "statusCancelled": "キャンセル済み",
+    "claim": "担当する",
+    "claimed": "引き継ぎを担当しました",
+    "resolve": "解決",
+    "resolveTitle": "有人引き継ぎを解決",
+    "resolutionPlaceholder": "対応結果を記録してください。解決後は以降のメッセージに対して自動対応が再開されます。",
+    "resolved": "引き継ぎを解決しました",
+    "cancel": "キャンセル",
+    "cancelled": "引き継ぎをキャンセルしました",
+    "cancelledByOwner": "所有者がキャンセルしました"
+  },
+  "bindings": {
+    "saved": "紐づけを更新しました",
+    "domainHint": "カスタマーサポートは専用のチャネルボットを使用し、デスクトップコンパニオンのチャネルとは完全に独立しています。",
+    "noBots": "カスタマーサポート用のチャネルボットはまだありません。ここで作成すると、このエージェントに自動で紐づけられます。",
+    "createBot": "チャネルボットを作成",
+    "createTitle": "カスタマーサポート用チャネルボットを作成",
+    "pickPlatform": "チャネルプラットフォームを選択",
+    "boundToOther": "紐づけ先: {{name}}",
+    "unbound": "未紐づけ",
+    "autoBound": "作成し、このエージェントに自動で紐づけました",
+    "hint": "紐づけると、そのボットへの受信メッセージはすべてこのエージェントが対応します（見知らぬ相手でもペアリングコードは不要です）。"
+  },
+  "notes": {
+    "add": "ノートを追加",
+    "empty": "ノートはまだありません。FAQ / スクリプト / 業務上の事実をここに記入してください。エージェントは読み取り専用で参照します。",
+    "kind": "種類",
+    "kindFaq": "FAQ",
+    "kindScript": "スクリプト",
+    "kindFact": "業務情報",
+    "content": "内容",
+    "contentPlaceholder": "FAQ / スクリプト / 業務情報を入力…",
+    "aliasesPlaceholder": "代替表現（1行に1つ）。例: このアプリ\nいくら",
+    "aliasesHint": "訪問者が使いそうな言い回しを1行に1つ入力します。ノート本文と異なる言い方で質問された場合でも、ノートを見つけやすくなります。",
+    "scope": "公開範囲",
+    "private": "プライベート",
+    "shared": "共有",
+    "sharedHint": "すべてのエージェントと共有（オフの場合はこのエージェントのみ）",
+    "enabled": "有効",
+    "view": "表示",
+    "edit": "編集",
+    "delete": "削除",
+    "more": "その他の操作",
+    "viewTitle": "ノートを表示",
+    "editTitle": "ノートを編集",
+    "close": "閉じる",
+    "created": "ノートを作成しました",
+    "updated": "ノートを更新しました",
+    "deleted": "ノートを削除しました",
+    "scopeLocked": "ノートの公開範囲は作成後に変更できません",
+    "deleteConfirm": "このノートを削除しますか？"
+  }
+}

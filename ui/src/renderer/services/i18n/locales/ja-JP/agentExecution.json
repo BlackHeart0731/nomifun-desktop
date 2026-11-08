@@ -1,0 +1,228 @@
+{
+  "panel": {
+    "title": "共同タスク",
+    "resize": "共同作業パネルのサイズを変更",
+    "open": "共同タスクを開く",
+    "collapse": "共同タスクを折りたたむ"
+  },
+  "status": {
+    "execution": {
+      "planning": "計画中",
+      "running": "実行中",
+      "paused": "スケジュール停止中",
+      "waiting_input": "判断待ち",
+      "completed": "完了",
+      "completed_with_failures": "一部完了",
+      "failed": "失敗",
+      "cancelled": "キャンセル済み"
+    },
+    "step": {
+      "pending": "待機中",
+      "running": "実行中",
+      "waiting_input": "判断待ち",
+      "completed": "完了",
+      "failed": "失敗",
+      "skipped": "スキップ",
+      "cancelled": "キャンセル済み"
+    }
+  },
+  "controls": {
+    "replan": "再計画",
+    "replanOk": "共同作業プランを更新しました",
+    "replanError": "再計画に失敗しました: {{error}}",
+    "planning": "計画中…",
+    "pause": "スケジュールを停止",
+    "pauseOk": "スケジュールを停止しました。開始済みのタスクは継続します。",
+    "pauseError": "停止に失敗しました: {{error}}",
+    "resume": "スケジュールを再開",
+    "resumeOk": "タスクのスケジュールを再開しました",
+    "resumeError": "再開に失敗しました: {{error}}",
+    "cancel": "共同作業を停止",
+    "stopAutomaticRun": "現在の自動実行を停止",
+    "stopping": "停止中…",
+    "cancelOk": "共同タスクをキャンセルしました",
+    "cancelError": "停止に失敗しました: {{error}}",
+    "activeParticipants": "稼働中の協力エージェント {{count}} 件"
+  },
+  "taskStop": {
+    "task": "タスクを停止",
+    "scope": "停止する範囲を選択",
+    "includeDelegated": "タスクと委任された作業を停止",
+    "delegatedOnly": "委任された作業のみ停止",
+    "accepted": "停止を受け付けました。リソースの解放はまだ確認されていません",
+    "error": "タスクの停止に失敗しました: {{error}}"
+  },
+  "adjust": {
+    "label": "共同作業を調整",
+    "placeholder": "完了済みの有効な作業を残しつつ、変更したい内容を記述…",
+    "summary": "プランを調整しました · 維持 {{kept}} · 追加 {{added}} · 削除 {{removed}}",
+    "error": "プランの調整に失敗しました: {{error}}"
+  },
+  "progress": {
+    "title": "共同作業の進捗",
+    "summary": "{{total}} 件中 {{done}} 件のタスクが完了",
+    "running": "{{count}} 件実行中",
+    "failed": "{{count}} 件失敗",
+    "question": "タスク「{{title}}」で判断が必要です"
+  },
+  "canvas": {
+    "fit": "全体を表示",
+    "showOverview": "概要を表示",
+    "hideOverview": "概要を隠す",
+    "result": "結果の概要",
+    "upstream": "上流",
+    "downstream": "下流",
+    "model": "モデル",
+    "role": "役割",
+    "attempts": "試行回数",
+    "inspect": "クリックして実行記録の全体を表示"
+  },
+  "thinking": {
+    "title": "共同作業プランを準備しています",
+    "short": "計画中…"
+  },
+  "editor": {
+    "goalPlaceholder": "目的、範囲、受け入れ条件を記述…",
+    "modelLabel": "共同作業のモデル",
+    "noModels": "利用可能なモデルがありません。先にモデルを設定して有効にしてください。",
+    "model": {
+      "automatic": "自動",
+      "single": "単一モデル",
+      "range": "モデル範囲",
+      "rangeCount": "モデル {{count}} 件",
+      "singlePlaceholder": "モデルを選択",
+      "rangePlaceholder": "モデルを選択（複数可）",
+      "automaticHint": "各タスクごとに、利用可能な {{count}} 件のモデルからシステムが選択します。",
+      "required": "利用可能なモデルを選択"
+    }
+  },
+  "step": {
+    "untitled": "無題のタスク",
+    "tokens": "トークン",
+    "waitingInput": "回答待ち"
+  },
+  "kind": {
+    "synthesis": "統合",
+    "verify": "検証",
+    "judge": "レビュー",
+    "loop": "ループ",
+    "parallelGroup": "並列共同作業 · {{label}}"
+  },
+  "verdict": {
+    "pass": "合格",
+    "fail": "不合格",
+    "pending": "検証中"
+  },
+  "judge": {
+    "winner": "選択済み",
+    "none": "結果はまだありません",
+    "pending": "レビュー中"
+  },
+  "loop": {
+    "done": "完了",
+    "failed": "失敗",
+    "iterating": "反復中"
+  },
+  "detail": {
+    "loadError": "共同作業の進捗を読み込めませんでした"
+  },
+  "configure": {
+    "model": "モデルを選択",
+    "followAutomatic": "自動",
+    "noModels": "利用可能なモデルがありません。先にモデルを設定してください。",
+    "modelHint": "このタスクのモデルを選択するか、自動のままにしてください。",
+    "presetLabel": "タスクの要件",
+    "presetPlaceholder": "このタスクで守るべき要件や希望を追加してください。",
+    "presetPill": "タスクの要件",
+    "presetPillHint": "このタスクの開始時に適用されます",
+    "pendingHint": "このタスクの開始前にモデルと要件を選択してください。",
+    "save": "設定を保存",
+    "saved": "保存しました。タスク開始時に適用されます",
+    "saveError": "保存に失敗しました: {{error}}"
+  },
+  "assignment": {
+    "change": "協力エージェントを変更",
+    "updated": "協力エージェントを更新しました",
+    "error": "協力エージェントの更新に失敗しました: {{error}}"
+  },
+  "restart": {
+    "button": "タスクを再開",
+    "checking": "タスクを確認中…",
+    "pending": "再開中…",
+    "accepted": "再開リクエストを受け付けました。元のタスクを処理しています",
+    "unconfirmed": "受付を確認できませんでした。もう一度クリックして同じリクエストを確認してください。",
+    "blocked": "再開できません。理由はタスク記録を確認してください。",
+    "continueRequired": "元のタスクの「続行」操作で再開してください。",
+    "reconcileRequired": "再試行する前に、元の結果を照合する必要があります。",
+    "resolved": "再開リクエストを処理しました。現在の進捗はタスク記録に表示されています。"
+  },
+  "adopt": {
+    "button": "現在の結果を採用",
+    "ok": "現在の結果を採用しました",
+    "error": "結果の採用に失敗しました: {{error}}"
+  },
+  "projection": {
+    "viewing": "現在のタスク",
+    "history": "過去の実行",
+    "current": "現在のタスクを表示",
+    "unavailable": "この実行記録は利用できません",
+    "return": "メインの会話に戻る"
+  },
+  "question": {
+    "title": "判断が必要です",
+    "hint": "協力エージェントが続行できるよう、選択内容を直接送信してください。",
+    "placeholder": "判断を入力…",
+    "submit": "判断を送信",
+    "ok": "判断を送信しました",
+    "error": "判断の送信に失敗しました: {{error}}"
+  },
+  "recovery": {
+    "pausedTitle": "サブタスクは停止中です",
+    "pausedDescription": "元の実行は停止しています。完了した操作と結果は保持されています。",
+    "pausedHint": "「タスクを再開」で既存の進捗から続行を試せます。システムはまず元の実行とリソースの後始末を確認し、安全に続行できない場合は理由を説明します。",
+    "title": "前回の結果が未確認です",
+    "task": "タスク「{{title}}」の前回の結果が未確認です",
+    "description": "前回の結果はまだ検証されていません。続行または再試行の前に、元の実行を照合してください。",
+    "hint": "元のタスクを再確認するか、完了した作業で置き換えるか、このタスクを停止してください。既存の影響と後始末の義務は保持されます。",
+    "settledHint": "この共同作業は終了しました。中断前に発生した可能性のある操作は、引き続き確認が必要です。",
+    "details": "中断の詳細を表示",
+    "recheck": "元の実行を再確認",
+    "replacement": "完了した代替結果を選択",
+    "replace": "この代替結果を使用",
+    "accepted": "リクエストを受け付けました。元のタスクを照合しています",
+    "error": "リクエストに失敗しました: {{error}}"
+  },
+  "steer": {
+    "placeholder": "協力エージェントの作業中に指示を追加…",
+    "submit": "指示を送信",
+    "ok": "指示を送信しました",
+    "error": "指示の送信に失敗しました: {{error}}"
+  },
+  "transcript": {
+    "notStarted": "タスクはまだ開始されていません"
+  },
+  "activity": {
+    "title": "実行と後始末",
+    "loading": "元のタスクの実行内容とリソースを読み取っています…",
+    "readFailed": "このタスクの動作状況を更新できませんでした。最後に観測した状態では現在の状態を確認できません。",
+    "stopPending": "実行の停止はまだ確認されていません",
+    "cleanupFailed": "後始末を確認できませんでした。再試行は同じ元のタスクを対象にします。"
+  },
+  "profile": {
+    "title": "プリセットとして保存",
+    "subtitle": "この共同作業の {{count}} 件の役割を再利用用に保存できます",
+    "entry": "再利用可能なプリセット",
+    "open": "再利用可能なプリセット {{count}} 件を表示",
+    "drawerHint": "この共同作業で {{count}} 件の再利用可能な役割が生成されました。1つを展開してモデルとスキルを確認し、今後の共同作業用に保存してください。",
+    "candidateSummary": "タスク {{tasks}} 件 · モデル {{models}} 件 · スキル {{skills}} 件",
+    "modelsLabel": "モデル",
+    "skillsLabel": "スキル {{count}} 件",
+    "saveAsPreset": "プリセットとして保存",
+    "saved": "保存しました",
+    "saveOk": "「{{name}}」をプリセットとして保存しました",
+    "saveError": "プリセットの保存に失敗しました: {{error}}",
+    "synthDesc": "「{{role}}」の役割は次を担当しました: {{tasks}}",
+    "synthDescBare": "この共同作業から取得した「{{role}}」の役割",
+    "taskSep": ", "
+  }
+}

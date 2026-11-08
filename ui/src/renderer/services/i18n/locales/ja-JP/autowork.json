@@ -1,0 +1,30 @@
+{
+  "tagSessions": {
+    "tag": "タグ",
+    "counts": "要件",
+    "countsFmt": "{{done}}/{{total}}",
+    "boundCount": "バインド済みセッション",
+    "unbind": "バインド解除",
+    "activeStopInSession": "このセッションは実行中です。バインド解除の前にセッションページから停止してください。",
+    "unbindOk": "バインド解除しました",
+    "unbindError": "バインド解除に失敗しました: {{error}}",
+    "conflictWarning": "複数のセッションがアクティブ",
+    "empty": "タグがまだありません",
+    "noBindings": "バインド済みセッションがありません",
+    "pausedBadge": "一時停止: {{reason}}",
+    "pausedReasons": {
+      "requirementFailed": "要件が失敗",
+      "userInterrupted": "ユーザーが停止",
+      "executionFailed": "実行が失敗",
+      "userActionRequired": "人の注意を待っています"
+    },
+    "resume": "再開",
+    "resumeSuccess": "タグを再開しました"
+  },
+  "runState": {
+    "off": "オフ",
+    "idle": "アイドル",
+    "active": "アクティブ",
+    "paused": "一時停止"
+  }
+}

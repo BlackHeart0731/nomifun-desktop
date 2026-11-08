@@ -32,6 +32,8 @@ export function normalizeLanguageCode(language: string): SupportedLanguage {
   switch (langOnly) {
     case 'zh':
       return 'zh-CN';
+    case 'ja':
+      return 'ja-JP';
     default:
       return DEFAULT_LANGUAGE;
   }

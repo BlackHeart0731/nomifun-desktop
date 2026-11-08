@@ -16,6 +16,7 @@ import { useLanguagePreference } from '@/renderer/hooks/system/useLanguagePrefer
 const LANGUAGE_LABELS: Record<string, string> = {
   'zh-CN': '简体中文',
   'en-US': 'English',
+  'ja-JP': '日本語',
 };
 
 interface TitlebarLanguageMenuProps {
@@ -87,7 +88,7 @@ const TitlebarLanguageMenu: React.FC<TitlebarLanguageMenuProps> = ({ strokeWidth
     [current, handleClickMenuItem, preference, t]
   );
 
-  const currentLabel = current === 'zh-CN' ? '中文' : 'English';
+  const currentLabel = current === 'zh-CN' ? '中文' : current === 'ja-JP' ? '日本語' : 'English';
   const tooltip = preference === SYSTEM_LANGUAGE
     ? t('settings.languageFollowSystemTooltip', { language: LANGUAGE_LABELS[current] ?? current })
     : t('settings.languageSwitchTooltip');

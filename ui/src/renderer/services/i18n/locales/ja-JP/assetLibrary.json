@@ -1,0 +1,66 @@
+{
+  "siderTitle": "アセット",
+  "subtitle": "$t(agentSettings.template.creativeStudio.default.name) で収集した画像、動画、テキストを一元管理 — アップロード、グループ化、タグ付け、一括整理、再利用ができます。",
+  "actionFailed": "操作に失敗しました",
+  "cancel": "キャンセル",
+  "sort": {
+    "createdDesc": "新しい順",
+    "createdAsc": "古い順",
+    "updatedDesc": "最近更新",
+    "nameAsc": "名前",
+    "sizeDesc": "サイズ"
+  },
+  "tagFilter": {
+    "label": "タグ"
+  },
+  "selection": {
+    "count": "{{count}} 件選択",
+    "selectAll": "ページを選択",
+    "clear": "選択をクリア"
+  },
+  "bulk": {
+    "moveToCollection": "コレクションに移動",
+    "addTags": "タグを追加",
+    "download": "ダウンロード",
+    "removeFromLibrary": "ライブラリから削除",
+    "delete": "削除",
+    "partial": "{{ok}} 件成功、{{fail}} 件失敗",
+    "doneMove": "{{count}} 件を移動しました",
+    "doneTag": "{{count}} 件にタグを付けました",
+    "doneRemove": "{{count}} 件を削除しました",
+    "doneDelete": "{{count}} 件を削除しました",
+    "downloadStarted": "{{count}} 件のダウンロードを開始しました"
+  },
+  "moveModal": {
+    "title": "コレクションに移動",
+    "label": "移動先コレクション",
+    "placeholder": "コレクションを選択または入力。空欄でグループ解除",
+    "ok": "移動"
+  },
+  "tagModal": {
+    "title": "一括でタグを追加",
+    "label": "タグ",
+    "placeholder": "タグを入力してEnter",
+    "ok": "追加",
+    "empty": "少なくとも1つのタグを入力してください"
+  },
+  "renameCollection": {
+    "trigger": "コレクション名を変更",
+    "title": "コレクション名を変更",
+    "label": "新しいコレクション名",
+    "placeholder": "新しいコレクション名を入力",
+    "ok": "変更",
+    "done": "{{count}} 件を更新しました",
+    "required": "新しいコレクション名を入力してください"
+  },
+  "removeConfirm": {
+    "title": "ライブラリから削除",
+    "content": "選択した {{count}} 件がライブラリから削除され、ここには表示されなくなります。キャンバスで使用されていないものは、後続のクリーンアップで回収される場合があります。続行しますか？",
+    "ok": "削除"
+  },
+  "deleteConfirm": {
+    "title": "アセットを削除",
+    "content": "選択した {{count}} 件を完全に削除しますか？元に戻せません。",
+    "ok": "削除"
+  }
+}

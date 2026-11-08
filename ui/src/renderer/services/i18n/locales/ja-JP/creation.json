@@ -1,0 +1,22 @@
+{
+  "agentUnavailable": "$t(agentSettings.template.creativeStudio.default.name) エージェントが読み込みされていません。再試行してください。",
+  "resourcesUnavailable": "$t(agentSettings.template.creativeStudio.default.name) リソースが準備できていません。更新して再試行してください。",
+  "mode": {
+    "chat": "日常会話",
+    "image": "画像生成",
+    "video": "動画生成",
+    "music": "音楽生成"
+  },
+  "scene": {
+    "trigger": "使用例: {{scene}}、すべての使用例を表示",
+    "title": "何をしますか？",
+    "description": {
+      "chat": "質問と日常的なサポート",
+      "image": "アイデアを画像に",
+      "video": "アイデアを動画に変える",
+      "music": "メロディとソングを作成"
+    },
+    "discovery": "画像、動画、音楽も作成できます",
+    "dismissHint": "使用例のヒントを閉じる"
+  }
+}

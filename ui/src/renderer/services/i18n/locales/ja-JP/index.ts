@@ -1,0 +1,76 @@
+/**
+ * ja-JP locale module index
+ * Exports all translation modules for Japanese (Japan)
+ */
+
+import common from './common.json';
+import update from './update.json';
+import login from './login.json';
+import fileSelection from './fileSelection.json';
+import preview from './preview.json';
+import conversation from './conversation.json';
+import settings from './settings.json';
+import messages from './messages.json';
+import mcp from './mcp.json';
+import tools from './tools.json';
+import google from './google.json';
+import cron from './cron.json';
+import requirements from './requirements.json';
+import guid from './guid.json';
+import creation from './creation.json';
+import agent from './agent.json';
+import terminal from './terminal.json';
+import webhook from './webhook.json';
+import autowork from './autowork.json';
+import nomi from './nomi.json';
+import knowledge from './knowledge.json';
+import customerService from './customerService.json';
+import assetLibrary from './assetLibrary.json';
+import sessionList from './sessionList.json';
+import modelFailover from './modelFailover.json';
+import agentExecution from './agentExecution.json';
+import collaboration from './collaboration.json';
+import creativeStudio from './creativeStudio.json';
+import browserWorkspace from './browserWorkspace.json';
+import ssh from './ssh.json';
+import appHosting from './appHosting.json';
+import agentSettings from './agentSettings.json';
+import idmm from './idmm.json';
+import feishu from './feishu.json';
+
+export default {
+  common,
+  update,
+  login,
+  fileSelection,
+  preview,
+  conversation,
+  settings,
+  messages,
+  mcp,
+  tools,
+  google,
+  cron,
+  requirements,
+  guid,
+  creation,
+  agent,
+  terminal,
+  webhook,
+  autowork,
+  nomi,
+  knowledge,
+  customerService,
+  assetLibrary,
+  sessionList,
+  modelFailover,
+  agentExecution,
+  collaboration,
+  creativeStudio,
+  browserWorkspace,
+  ssh,
+  appHosting,
+  agentSettings,
+  idmm,
+  feishu,
+};
