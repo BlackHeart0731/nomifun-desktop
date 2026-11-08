@@ -5414,6 +5414,8 @@ export type I18nKey =
   | 'nomi.overview.changeFigure'
   | 'nomi.overview.companionOff'
   | 'nomi.overview.companionOn'
+  | 'nomi.overview.companionSwitcher'
+  | 'nomi.overview.companionSwitcherHint'
   | 'nomi.overview.deskVisible'
   | 'nomi.overview.fallbackChatModel'
   | 'nomi.overview.fallbackChatModelHint'

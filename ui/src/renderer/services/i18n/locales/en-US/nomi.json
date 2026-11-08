@@ -272,6 +272,8 @@
     "deskVisible": "Show on desktop",
     "companionOn": "Shown",
     "companionOff": "Hidden",
+    "companionSwitcher": "Switcher button",
+    "companionSwitcherHint": "Show the button for switching companions on the desktop companion.",
     "growthLevel": "Growth level",
     "growthLevelHint": "The longer you spend together, the higher its level — and the better it keeps up with your rhythm",
     "xpProgress": "{{xp}} / {{next}} XP",

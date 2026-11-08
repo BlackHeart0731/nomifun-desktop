@@ -272,6 +272,8 @@
     "deskVisible": "桌面显示",
     "companionOn": "已显示",
     "companionOff": "已隐藏",
+    "companionSwitcher": "切换按钮",
+    "companionSwitcherHint": "在桌面伙伴上显示切换伙伴的按钮。",
     "growthLevel": "成长等级",
     "growthLevelHint": "相处越久等级越高，它会越跟得上你的节奏",
     "xpProgress": "{{xp}} / {{next}} XP",

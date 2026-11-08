@@ -5,6 +5,9 @@ notes at a high level rather than a complete historical log.
 
 ## Unreleased
 
+- Add a setting (Nomi → Overview → Appearance) to show or hide the companion
+  switcher button on the desktop companion. It is shown by default.
+
 ## v0.8.20 - 2026-11-05
 
 - Connect new SSH sessions immediately, add explicit connect/disconnect controls,

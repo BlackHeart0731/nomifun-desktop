@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { Message, Progress, Switch } from '@arco-design/web-react';
 import { Platte } from '@icon-park/react';
 import type { ICompanionProfile, ICompanionStatus } from '@/common/adapter/ipcBridge';
+import { useConfig } from '@/renderer/hooks/config/useConfig';
 import { NomiSettingList, NomiSettingRow, NomiSettingSection } from '@/renderer/components/base/NomiSettingLayout';
 import NomiInput from '@/renderer/components/base/NomiInput';
 import CompanionAvatar from '@renderer/pages/companion/CompanionAvatar';
@@ -50,6 +51,7 @@ const AppearanceSection: React.FC<AppearanceSectionProps> = ({
 }) => {
   const { t } = useTranslation();
   const { figures } = useFigures();
+  const [showSwitcher, setShowSwitcher] = useConfig('companion.showSwitcher');
 
   const [nameDraft, onNameChange] = useDebouncedText(profile.name, (value) => {
     const name = value.trim();
@@ -139,6 +141,21 @@ const AppearanceSection: React.FC<AppearanceSectionProps> = ({
                 onChange={(companion_enabled) => void patchCompanion({ appearance: { companion_enabled } })}
               />
             </>
+          }
+        />
+
+        <NomiSettingRow
+          title={t('nomi.overview.companionSwitcher', { defaultValue: '切换按钮' })}
+          description={t('nomi.overview.companionSwitcherHint', {
+            defaultValue: '在桌面伙伴上显示切换伙伴的按钮',
+          })}
+          controls={
+            <Switch
+              size='small'
+              className='compact-dark-switch shrink-0'
+              checked={showSwitcher !== false}
+              onChange={(checked) => void setShowSwitcher(checked).catch((e) => Message.error(String(e)))}
+            />
           }
         />
 

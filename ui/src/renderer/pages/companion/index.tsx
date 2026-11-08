@@ -34,6 +34,7 @@ import ChannelWecomLogo from '@/renderer/assets/channel-logos/wecom.svg';
 import ChannelWeixinLogo from '@/renderer/assets/channel-logos/weixin.svg';
 import CompanionAvatar from './CompanionAvatar';
 import CompanionSwitcher from './CompanionSwitcher';
+import { useCompanionSwitcherVisible } from './useCompanionSwitcherVisible';
 import { useCompanionSessionBubble } from './useCompanionSessionBubble';
 import { getDeskSpecFor } from './characters';
 import { customFigureMetaOf } from './characters/customMeta';
@@ -830,6 +831,7 @@ const CompanionPage: React.FC = () => {
 
   // Only reply/composer surfaces resize the native window. Name tooltips are DOM-only.
   // Memory uses its own native window and never participates here.
+  const switcherVisible = useCompanionSwitcherVisible();
   const hasBubble = bubble.length > 0;
   const expandedMode: ExpandedWindowMode | null = hasBubble || composerOpen ? 'chat' : null;
   useEffect(() => {
@@ -1937,16 +1939,18 @@ const CompanionPage: React.FC = () => {
           // CSS hover 先显示但 React reveal 尚未赶上时也不会出现「看得到却穿透」。
           data-companion-hit
         >
-          <CompanionSwitcher
-            companionId={companionId}
-            profile={profile}
-            roster={roster}
-            switchingCompanionId={switchingCompanionId}
-            open={compactSwitchOpen}
-            onOpenChange={setCompactSwitchOpen}
-            onSwitch={(id) => void activateCompanionWindow(id)}
-            onShowAll={openComposer}
-          />
+          {switcherVisible && (
+            <CompanionSwitcher
+              companionId={companionId}
+              profile={profile}
+              roster={roster}
+              switchingCompanionId={switchingCompanionId}
+              open={compactSwitchOpen}
+              onOpenChange={setCompactSwitchOpen}
+              onSwitch={(id) => void activateCompanionWindow(id)}
+              onShowAll={openComposer}
+            />
+          )}
           <input
             value={input}
             aria-label={t('nomi.companion.chatPlaceholder', { name: profile?.name || 'Nomi' })}

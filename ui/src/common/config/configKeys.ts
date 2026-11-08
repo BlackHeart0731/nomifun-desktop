@@ -55,6 +55,8 @@ export type ConfigKeyMap = {
   'system.cronNotificationEnabled': boolean | undefined;
   'system.keepAwake': boolean | undefined;
   'system.autoPreviewOfficeFiles': boolean | undefined;
+  // Show the companion switcher button in the desktop companion window. Absent = shown.
+  'companion.showSwitcher': boolean | undefined;
   // 发送键偏好：'enter'=Enter 发送/Shift+Enter 换行（默认）；'mod-enter'=Ctrl/⌘+Enter 发送、Enter 换行
   'chat.sendKey': 'enter' | 'mod-enter' | undefined;
   // Install-wide conversation presentation preferences. These only affect
